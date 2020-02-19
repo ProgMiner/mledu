@@ -26,7 +26,7 @@ SECRET_KEY = configs.SECRET_KEY
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://mledu.herokuapp.com/api/data']
+ALLOWED_HOSTS = ['.herokuapp.com']
 
 
 # Application definition
