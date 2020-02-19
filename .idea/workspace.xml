@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2da7a155-31ba-4fca-b4b6-b95e31fa382a" name="Default Changelist" comment="" />
+    <list default="true" id="2da7a155-31ba-4fca-b4b6-b95e31fa382a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,6 +23,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1Y2gxYfTPoh8iXS0ed5OaPFCyct" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -67,7 +70,7 @@
       <option name="presentableId" value="Default" />
       <updated>1582146349815</updated>
       <workItem from="1582146353955" duration="3277000" />
-      <workItem from="1582150154573" duration="353000" />
+      <workItem from="1582150154573" duration="611000" />
     </task>
     <servers />
   </component>
@@ -79,6 +82,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="183" y="358" width="585" height="397" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1582150292987" />
+    <state x="250" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582150794960">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="250" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1582150794960" />
     <state x="263" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1582147960582">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
