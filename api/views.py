@@ -4,6 +4,7 @@ from rest_framework.views import APIView
 
 
 class GetAnswer(APIView):
+    @cors
     def get(self, request):
         data = 'test data'
         return Response({"data": data})
