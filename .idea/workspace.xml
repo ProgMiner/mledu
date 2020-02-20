@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2da7a155-31ba-4fca-b4b6-b95e31fa382a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ml/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ml_server/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ml_server/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
         <option value="Python Script" />
       </list>
     </option>
@@ -31,6 +36,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -72,7 +78,9 @@
       <updated>1582146349815</updated>
       <workItem from="1582146353955" duration="3277000" />
       <workItem from="1582150154573" duration="3165000" />
-      <workItem from="1582154125395" duration="1830000" />
+      <workItem from="1582154125395" duration="2259000" />
+      <workItem from="1582160018936" duration="2345000" />
+      <workItem from="1582164220647" duration="1151000" />
     </task>
     <servers />
   </component>
@@ -92,5 +100,9 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="263" y="311" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1582153318167" />
+    <state x="24" y="381" key="com.intellij.ide.util.TipDialog" timestamp="1582160019275">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="24" y="381" key="com.intellij.ide.util.TipDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1582160019275" />
   </component>
 </project>
