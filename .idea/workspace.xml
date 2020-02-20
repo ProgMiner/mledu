@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2da7a155-31ba-4fca-b4b6-b95e31fa382a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ml/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/ml/test.py" afterDir="false" />
     </list>
@@ -128,7 +127,7 @@
       <workItem from="1582150154573" duration="3165000" />
       <workItem from="1582154125395" duration="2259000" />
       <workItem from="1582160018936" duration="2345000" />
-      <workItem from="1582164220647" duration="2916000" />
+      <workItem from="1582164220647" duration="3260000" />
     </task>
     <servers />
   </component>
