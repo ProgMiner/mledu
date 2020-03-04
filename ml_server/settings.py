@@ -25,7 +25,7 @@ SECRET_KEY = configs.SECRET_KEY
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.herokuapp.com']
+ALLOWED_HOSTS = ['.herokuapp.com', '127.0.0.1']
 
 # Application definition
 
@@ -37,9 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'OpenEdu.apps.OpeneduConfig',
-    'rest_framework',
-    'api',
-    'corsheaders',
+    'main',
 ]
 
 MIDDLEWARE = [
