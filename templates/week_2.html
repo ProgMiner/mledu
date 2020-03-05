@@ -6,49 +6,55 @@
 {% endblock %}
 
 {% block content %}
-<div class="col-sm-9">
-      <hr>
-      <h2>Неделя 2</h2>
-      <br>
-      <ul>
-          <li><h3>Наберите команды</h3></li>
-          <ol>
-          <li><em>SELECT COUNT(*) FROM pulsar_stars WHERE (TARGET = 0 AND MIP BETWEEN <b>Значение_1</b> AND <b>Значение_2</b>) OR (TARGET = 1 AND MIP BETWEEN <b>Значение_1</b> AND <b>Значение_2</b>)</em></li>
+    <div class="col-sm-9">
+        <hr>
+        <h2>Неделя 2</h2>
+        <br>
+        <ul>
+            <li><h3>Наберите команды</h3></li>
+            <ol>
+                <li><em>SELECT COUNT(*) FROM pulsar_stars WHERE (TARGET = 0 AND MIP BETWEEN <b>Значение_1</b> AND <b>Значение_2</b>)
+                    OR (TARGET = 1 AND MIP BETWEEN <b>Значение_1</b> AND <b>Значение_2</b>)</em></li>
 
-              <em><font color="#8b0000">Число строк в выборке</font></em>
-              <br>
-              <br>
-              <li><em>SELECT AVG(MIP) FROM pulsar_stars WHERE (TARGET = 0 AND MIP BETWEEN <b>Значение_1</b> AND <b>Значение_2</b>) OR (TARGET = 1 AND MIP BETWEEN <b>Значение_1</b> AND <b>Значение_2</b>)</em></li>
+                <em><font color="#8b0000">Число строк в выборке</font></em>
+                <br>
+                <br>
+                <li><em>SELECT AVG(MIP) FROM pulsar_stars WHERE (TARGET = 0 AND MIP BETWEEN <b>Значение_1</b> AND <b>Значение_2</b>)
+                    OR (TARGET = 1 AND MIP BETWEEN <b>Значение_1</b> AND <b>Значение_2</b>)</em></li>
 
-              <em><font color="#8b0000">Среднее по выборке</font></em>
-                       <br>
+                <em><font color="#8b0000">Среднее по выборке</font></em>
+                <br>
 
-          </ol>
-           <li><h3>Сохраните Таблицу</h3></li>
-          <ol>
-          <li><em>SELECT * FROM pulsar_stars WHERE (TARGET = 0 AND MIP BETWEEN <b>Значение_1</b> AND <b>Значение_2</b>) OR (TARGET = 1 AND MIP BETWEEN <b>Значение_1</b> AND <b>Значение_2</b>)</em></li>
+            </ol>
+            <li><h3>Сохраните Таблицу</h3></li>
+            <ol>
+                <li><em>SELECT * FROM pulsar_stars WHERE (TARGET = 0 AND MIP BETWEEN <b>Значение_1</b> AND
+                    <b>Значение_2</b>) OR (TARGET = 1 AND MIP BETWEEN <b>Значение_1</b> AND <b>Значение_2</b>)</em></li>
 
-              <em><font color="#8b0000">Кнопка Download</font></em>
-          </ol>
+                <em><font color="#8b0000">Кнопка Download</font></em>
+            </ol>
             <form enctype="multipart/form-data" method="post" action="/week_2">
-              {%csrf_token%}
+                {% csrf_token %}
                 <li><h3>Загрузите ваш Dataset</h3></li>
                 <p><input type="file" name="f">
-                 <br>
-              <li><h3>Введите значения STAR через запятую</h3></li>
+                    <br>
+                <li><h3>Введите значения STAR через запятую</h3></li>
                 <p><input type="text" name="star" value="0.213, 0.228 ...">
                     <br>
                     <br>
                     <input type="submit" value="Отправить"></p>
-          </form>
-      </ul>
-      <br><br>
-      <hr>
+            </form>
+        </ul>
+        <br><br>
+        <hr>
         {% if mean %}
-            <h2>3-Выборочное среднее для столбца после нормировки: <b>{{ mean }}</b> </h2>
-             <h2>4-Расстояние от объекта до ближайшей звезды: <b> {{ min }}</b> </h2>
+            <h2>3-Выборочное среднее для столбца после нормировки: <b>{{ mean }}</b></h2>
+            <h2>4-Расстояние от объекта до ближайшей звезды: <b> {{ min }}</b></h2>
         {% endif %}
+    <div>
+        <iframe src="https://money.yandex.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D1%82%D1%8C%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82&targets-hint=&default-sum=30&button-text=14&comment=on&hint=&successURL=&quickpay=shop&account=4100112039044109"
+                width="50%" height="307" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
     </div>
-</div>
+    </div>
 
 {% endblock %}
