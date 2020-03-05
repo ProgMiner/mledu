@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2da7a155-31ba-4fca-b4b6-b95e31fa382a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ml/week3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/week_4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/week_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/week_2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/week_3.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/week_3.html" afterDir="false" />
-    </list>
+    <list default="true" id="2da7a155-31ba-4fca-b4b6-b95e31fa382a" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -172,6 +163,7 @@
       <workItem from="1583348383542" duration="16487000" />
       <workItem from="1583406177255" duration="2515000" />
       <workItem from="1583416472171" duration="4105000" />
+      <workItem from="1583425327289" duration="300000" />
     </task>
     <servers />
   </component>

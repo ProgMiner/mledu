@@ -1,5 +1,7 @@
 pandas
 
+matplotlib
+
 Django
 
 gunicorn
