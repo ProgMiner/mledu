@@ -26,5 +26,5 @@ def week3(path):
             break
     fig, ax = plt.subplots()
     ax.scatter(x_transformed[:, 0], x_transformed[:, 1])
-    fig.savefig('main/static/1.png')
+    fig.savefig('static/1.png')
     return FIRST, SECOND, FIRD, FORTH
