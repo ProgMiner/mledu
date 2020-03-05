@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2da7a155-31ba-4fca-b4b6-b95e31fa382a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ml_server/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ml_server/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/week_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/week_2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/week_3.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/week_3.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -159,7 +155,7 @@
       <workItem from="1582318496053" duration="29000" />
       <workItem from="1583341766623" duration="66000" />
       <workItem from="1583348383542" duration="16487000" />
-      <workItem from="1583406177255" duration="759000" />
+      <workItem from="1583406177255" duration="1280000" />
     </task>
     <servers />
   </component>
