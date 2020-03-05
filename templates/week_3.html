@@ -3,20 +3,43 @@
 {% block li %}
     <li><a href="/week_2">Неделя 2</a></li>
     <li class="active"><a href="/week_3">Неделя 3</a></li>
+    <li><a href="/week_4">Неделя 4</a></li>
 {% endblock %}
 
 {% block content %}
-<div class="col-sm-9">
-      <hr>
-      <h2>Неделя 3</h2>
-      <p>Food is my passion. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <br><br>
-      <hr>
+    <div class="col-sm-9">
+        <hr>
+        <h2>Неделя 3</h2>
+        <br>
+        <form enctype="multipart/form-data" method="post" action="/week_3">
+            {% csrf_token %}
+            <ul><li><h3>Загрузите ваш Dataset</h3></li>
+            <p><input type="file" name="f" required>
+                <br>
+                <br>
+                <input type="submit" value="Отправить"></p>
+            </ul>
+        </form>
+
+
+        <br><br>
+        <hr>
+        {% if FIRST %}
+            <h2>1-Координата первого объекта относительно первой главной компоненты: <b>{{ FIRST }}</b></h2>
+            <h2>2-Координата первого объекта относительно второй главной компоненты: <b> {{ SECOND }}</b></h2>
+            <h2>3-Доля объясненной дисперсии при использовании первых двух главных компонент: <b> {{ FIRD }}</b></h2>
+            <h2>4-Минимальное количество главных компонент необходимо использовать, чтобы доля объясненной дисперсии превышала 85%: <b> {{ FORTH }}</b></h2>
+            {% load static %}
+            <br>
+            <h3><em><font color="#8b0000"> 5-Количество групп объектов</font></em></h3>
+            <img src="{%static '1.png'%}">
+            <em></em>
+        {% endif %}
+
+        <div>
+            <iframe src="https://money.yandex.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D1%82%D1%8C%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82&targets-hint=&default-sum=&button-text=14&payment-type-choice=on&comment=on&hint=&successURL=&quickpay=shop&account=4100112039044109"
+                    width="50%" height="307" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+        </div>
     </div>
-
-
-<div>
-    <iframe src="https://money.yandex.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D1%82%D1%8C%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82&targets-hint=&default-sum=&button-text=14&payment-type-choice=on&comment=on&hint=&successURL=&quickpay=shop&account=4100112039044109" width="50%" height="307" frameborder="0" allowtransparency="true" scrolling="no"></iframe></div>
-</div>
 
 {% endblock %}

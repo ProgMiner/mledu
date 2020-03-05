@@ -2,6 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2da7a155-31ba-4fca-b4b6-b95e31fa382a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ml/week3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/week_4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/week_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/week_2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/week_3.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/week_3.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -16,8 +23,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -36,7 +43,15 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/main" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates" />
+    </key>
   </component>
   <component name="RunManager" selected="Django server.ml_server">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -155,7 +170,8 @@
       <workItem from="1582318496053" duration="29000" />
       <workItem from="1583341766623" duration="66000" />
       <workItem from="1583348383542" duration="16487000" />
-      <workItem from="1583406177255" duration="1280000" />
+      <workItem from="1583406177255" duration="2515000" />
+      <workItem from="1583416472171" duration="4105000" />
     </task>
     <servers />
   </component>
@@ -167,34 +183,34 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="183" y="358" width="585" height="397" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1582150292987" />
-    <state x="250" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582150794960">
+    <state x="250" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583424958694">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="250" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1582150794960" />
-    <state x="263" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1583341830714">
+    <state x="250" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1583424958694" />
+    <state x="263" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1583416478889">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="263" y="311" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1583341830714" />
-    <state width="914" height="195" key="GridCell.Tab.0.bottom" timestamp="1583406964339">
+    <state x="263" y="311" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1583416478889" />
+    <state width="1388" height="195" key="GridCell.Tab.0.bottom" timestamp="1583425162164">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="914" height="195" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1583406964339" />
-    <state width="914" height="195" key="GridCell.Tab.0.center" timestamp="1583406964338">
+    <state width="1388" height="195" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1583425162164" />
+    <state width="1388" height="195" key="GridCell.Tab.0.center" timestamp="1583425162163">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="914" height="195" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1583406964338" />
-    <state width="914" height="195" key="GridCell.Tab.0.left" timestamp="1583406964338">
+    <state width="1388" height="195" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1583425162163" />
+    <state width="1388" height="195" key="GridCell.Tab.0.left" timestamp="1583425162162">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="914" height="195" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1583406964338" />
-    <state width="914" height="195" key="GridCell.Tab.0.right" timestamp="1583406964339">
+    <state width="1388" height="195" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1583425162162" />
+    <state width="1388" height="195" key="GridCell.Tab.0.right" timestamp="1583425162163">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="914" height="195" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1583406964339" />
-    <state x="24" y="381" key="com.intellij.ide.util.TipDialog" timestamp="1583406177287">
+    <state width="1388" height="195" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1583425162163" />
+    <state x="24" y="381" key="com.intellij.ide.util.TipDialog" timestamp="1583416472153">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="24" y="381" key="com.intellij.ide.util.TipDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1583406177287" />
+    <state x="24" y="381" key="com.intellij.ide.util.TipDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1583416472153" />
     <state x="46" y="150" width="857" height="813" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1583360307933">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
