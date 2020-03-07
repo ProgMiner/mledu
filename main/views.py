@@ -40,6 +40,8 @@ def week_3(request):
             path_2 = fs.path(filename)
             FIRST, SECOND, FIRD, FORTH = week3.week3(path, path_1, path_2)
             os.remove(path)
+            os.remove(path_1)
+            os.remove(path_2)
             return render(request, 'week_3.html', context={'FIRST': FIRST,
                                                            'SECOND': SECOND,
                                                            'FIRD': FIRD,
