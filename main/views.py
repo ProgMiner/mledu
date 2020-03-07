@@ -3,6 +3,7 @@ from django.core.files.storage import FileSystemStorage
 from ml import week2
 from ml import week3
 from ml import week4
+from ml_server.settings import STATIC_URL
 import os
 
 
@@ -38,10 +39,16 @@ def week_3(request):
             myfile_2 = request.FILES['f2']
             filename_2 = fs.save(myfile_2.name, myfile_2)
             path_2 = fs.path(filename_2)
-            FIRST, SECOND, FIRD, FORTH = week3.week3(path, path_1, path_2)
-            os.remove(path)
-            os.remove(path_1)
-            os.remove(path_2)
+            try:
+                FIRST, SECOND, FIRD, FORTH = week3.week3(path, path_1, path_2)
+                os.remove(path)
+                os.remove(path_1)
+                os.remove(path_2)
+            except:
+                os.remove(path)
+                os.remove(path_1)
+                os.remove(path_2)
+
             return render(request, 'week_3.html', context={'FIRST': FIRST,
                                                            'SECOND': SECOND,
                                                            'FIRD': FIRD,
