@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2da7a155-31ba-4fca-b4b6-b95e31fa382a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ml/week4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/week_5.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/week_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/week_2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/week_3.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/week_3.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/week_4.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/week_4.html" afterDir="false" />
@@ -40,15 +43,15 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/main" />
-      <recent name="$PROJECT_DIR$/templates" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/main" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/main" />
     </key>
   </component>
@@ -173,7 +176,7 @@
       <workItem from="1583416472171" duration="4105000" />
       <workItem from="1583425327289" duration="1385000" />
       <workItem from="1583516768186" duration="101000" />
-      <workItem from="1583517407229" duration="2914000" />
+      <workItem from="1583517407229" duration="7636000" />
     </task>
     <servers />
   </component>
@@ -189,30 +192,30 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="250" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1583426585285" />
-    <state x="263" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1583416478889">
+    <state x="263" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1583525118470">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="263" y="311" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1583416478889" />
-    <state width="1558" height="279" key="GridCell.Tab.0.bottom" timestamp="1583520285589">
+    <state x="263" y="311" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1583525118470" />
+    <state width="1874" height="128" key="GridCell.Tab.0.bottom" timestamp="1583541325413">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1558" height="279" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1583520285589" />
-    <state width="1558" height="279" key="GridCell.Tab.0.center" timestamp="1583520285587">
+    <state width="1874" height="128" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1583541325413" />
+    <state width="1874" height="128" key="GridCell.Tab.0.center" timestamp="1583541325413">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1558" height="279" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1583520285587" />
-    <state width="1558" height="279" key="GridCell.Tab.0.left" timestamp="1583520285586">
+    <state width="1874" height="128" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1583541325413" />
+    <state width="1874" height="128" key="GridCell.Tab.0.left" timestamp="1583541325413">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1558" height="279" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1583520285586" />
-    <state width="1558" height="279" key="GridCell.Tab.0.right" timestamp="1583520285588">
+    <state width="1874" height="128" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1583541325413" />
+    <state width="1874" height="128" key="GridCell.Tab.0.right" timestamp="1583541325413">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1558" height="279" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1583520285588" />
-    <state x="24" y="384" width="688" height="342" key="com.intellij.ide.util.TipDialog" timestamp="1583517538879">
+    <state width="1874" height="128" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1583541325413" />
+    <state x="24" y="384" width="688" height="342" key="com.intellij.ide.util.TipDialog" timestamp="1583541362380">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="24" y="384" width="688" height="342" key="com.intellij.ide.util.TipDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1583517538879" />
+    <state x="24" y="384" width="688" height="342" key="com.intellij.ide.util.TipDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1583541362380" />
     <state x="46" y="150" width="857" height="813" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1583360307933">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
