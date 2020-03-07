@@ -16,6 +16,13 @@
             {% csrf_token %}
             <ul><li><h3>Загрузите ваш Dataset</h3></li>
             <p><input type="file" name="f" required>
+                <li><h3>Загрузите матрицу счета</h3></li>
+                <em><font color="#8b0000">Упражнение 3.2</font> </em>
+            <p><input type="file" name="f1" required>
+                <li><h3>Загрузите матрицу весов</h3></li>
+                <em><font color="#8b0000">Упражнение 3.2</font> </em>
+            <p><input type="file" name="f2" required>
+
                 <br>
                 <br>
                 <input type="submit" value="Отправить"></p>
@@ -31,10 +38,14 @@
             <h2>3-Доля объясненной дисперсии при использовании первых двух главных компонент: <b> {{ FIRD }}</b></h2>
             <h2>4-Минимальное количество главных компонент необходимо использовать, чтобы доля объясненной дисперсии превышала 85%: <b> {{ FORTH }}</b></h2>
 
-            <br>
+            <br><div style="float: left">
             <h3><em><font color="#8b0000"> 5-Количество групп объектов</font></em></h3>
             {% load static %}
             <img src="{%static '1.png'%}">
+            </div>
+            <h3><em><font color="#8b0000"> 6-Логотип мероприятия</font></em></h3>
+            {% load static %}
+            <img src="{%static '2.png'%}">
            <h4><em><font color="#8b0000">Для получения подробного объяснения и кода по данной неделе необходимо пожертвовать любую сумму и указать в комментрие номер недели и ссылку на вк/email</font> </em></h4>
         {% endif %}
 

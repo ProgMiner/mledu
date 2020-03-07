@@ -4,7 +4,7 @@ from matplotlib import pyplot as plt
 from sklearn.decomposition import PCA
 
 
-def week3(path):
+def week3(path, path_1, path_2):
     data = pd.read_csv(path, names=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
     data = np.array(data)
     pca_1 = PCA(n_components=1, svd_solver='full')
@@ -27,4 +27,12 @@ def week3(path):
     fig, ax = plt.subplots()
     ax.scatter(x_transformed[:, 0], x_transformed[:, 1])
     fig.savefig('static/1.png')
+    scores = np.genfromtxt(path_1, delimiter=';')
+    loadings = np.genfromtxt(path_2, delimiter=';')
+    values = np.dot(scores, loadings.T)
+    fig, ax = plt.subplots()
+    ax.imshow(values, cmap='Greys_r')
+    fig.savefig('static/2.png')
     return FIRST, SECOND, FIRD, FORTH
+
+

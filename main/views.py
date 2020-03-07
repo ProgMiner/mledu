@@ -32,7 +32,13 @@ def week_3(request):
             fs = FileSystemStorage()
             filename = fs.save(myfile.name, myfile)
             path = fs.path(filename)
-            FIRST, SECOND, FIRD, FORTH = week3.week3(path)
+            myfile = request.FILES['f1']
+            filename = fs.save(myfile.name, myfile)
+            path_1 = fs.path(filename)
+            myfile = request.FILES['f2']
+            filename = fs.save(myfile.name, myfile)
+            path_2 = fs.path(filename)
+            FIRST, SECOND, FIRD, FORTH = week3.week3(path, path_1, path_2)
             os.remove(path)
             return render(request, 'week_3.html', context={'FIRST': FIRST,
                                                            'SECOND': SECOND,

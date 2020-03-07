@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2da7a155-31ba-4fca-b4b6-b95e31fa382a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ml/week4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/week_5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OpenEdu/.idea/OpenEdu.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/week_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/week_2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml/week3.py" beforeDir="false" afterPath="$PROJECT_DIR$/ml/week3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/week_3.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/week_3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/week_4.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/week_4.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,8 +40,9 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../OpenEdu" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -177,6 +176,7 @@
       <workItem from="1583425327289" duration="1385000" />
       <workItem from="1583516768186" duration="101000" />
       <workItem from="1583517407229" duration="7636000" />
+      <workItem from="1583541362545" duration="2178000" />
     </task>
     <servers />
   </component>
@@ -188,30 +188,30 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="183" y="358" width="585" height="397" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1582150292987" />
-    <state x="250" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583426585285">
+    <state x="250" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583543208021">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="250" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1583426585285" />
-    <state x="263" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1583525118470">
+    <state x="250" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1583543208021" />
+    <state x="263" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1583542497275">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="263" y="311" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1583525118470" />
-    <state width="1874" height="128" key="GridCell.Tab.0.bottom" timestamp="1583541325413">
+    <state x="263" y="311" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1583542497275" />
+    <state width="914" height="128" key="GridCell.Tab.0.bottom" timestamp="1583543540394">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="128" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1583541325413" />
-    <state width="1874" height="128" key="GridCell.Tab.0.center" timestamp="1583541325413">
+    <state width="914" height="128" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1583543540394" />
+    <state width="914" height="128" key="GridCell.Tab.0.center" timestamp="1583543540394">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="128" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1583541325413" />
-    <state width="1874" height="128" key="GridCell.Tab.0.left" timestamp="1583541325413">
+    <state width="914" height="128" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1583543540394" />
+    <state width="914" height="128" key="GridCell.Tab.0.left" timestamp="1583543540393">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="128" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1583541325413" />
-    <state width="1874" height="128" key="GridCell.Tab.0.right" timestamp="1583541325413">
+    <state width="914" height="128" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1583543540393" />
+    <state width="914" height="128" key="GridCell.Tab.0.right" timestamp="1583543540394">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="128" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1583541325413" />
+    <state width="914" height="128" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1583543540394" />
     <state x="24" y="384" width="688" height="342" key="com.intellij.ide.util.TipDialog" timestamp="1583541362380">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
