@@ -32,12 +32,12 @@ def week_3(request):
             fs = FileSystemStorage()
             filename = fs.save(myfile.name, myfile)
             path = fs.path(filename)
-            myfile = request.FILES['f1']
-            filename = fs.save(myfile.name, myfile)
-            path_1 = fs.path(filename)
-            myfile = request.FILES['f2']
-            filename = fs.save(myfile.name, myfile)
-            path_2 = fs.path(filename)
+            myfile_1 = request.FILES['f1']
+            filename_1 = fs.save(myfile_1.name, myfile_1)
+            path_1 = fs.path(filename_1)
+            myfile_2 = request.FILES['f2']
+            filename_2 = fs.save(myfile_2.name, myfile_2)
+            path_2 = fs.path(filename_2)
             FIRST, SECOND, FIRD, FORTH = week3.week3(path, path_1, path_2)
             os.remove(path)
             os.remove(path_1)
