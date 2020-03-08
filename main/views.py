@@ -1,13 +1,33 @@
 from django.shortcuts import render, HttpResponse
 from django.core.files.storage import FileSystemStorage
+from rest_framework.response import Response
+from rest_framework.views import APIView
+from rest_framework import serializers
 from ml import week2
 from ml import week3
 from ml import week4
+import datetime
 from ml_server.settings import STATIC_URL
 import os
 
+logs = []
+
+class Logs(APIView):
+    def get(self, request):
+        return Response({"logs": str(logs)})
+
+
+def get_client_ip(request):
+    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+    if x_forwarded_for:
+        ip = x_forwarded_for.split(',')[-1].strip()
+    else:
+        ip = request.META.get('REMOTE_ADDR')
+    return ip
+
 
 def week_2(request):
+    logs.append([datetime.datetime.now().strftime("%m/%d, %H:%M"), get_client_ip(request)])
     if request.method == 'POST' and request.FILES['f']:
         try:
             star = request.POST.get('star')
@@ -27,6 +47,7 @@ def week_2(request):
 
 
 def week_3(request):
+    logs.append([datetime.datetime.now().strftime("%m/%d, %H:%M"), get_client_ip(request)])
     if request.method == 'POST' and request.FILES['f']:
         try:
             myfile = request.FILES['f']
@@ -40,19 +61,20 @@ def week_3(request):
             filename_2 = fs.save(myfile_2.name, myfile_2)
             path_2 = fs.path(filename_2)
             try:
+
                 FIRST, SECOND, FIRD, FORTH = week3.week3(path, path_1, path_2)
                 os.remove(path)
                 os.remove(path_1)
                 os.remove(path_2)
+                return render(request, 'week_3.html', context={'FIRST': FIRST,
+                                                               'SECOND': SECOND,
+                                                               'FIRD': FIRD,
+                                                               'FORTH': FORTH})
             except:
                 os.remove(path)
                 os.remove(path_1)
                 os.remove(path_2)
-
-            return render(request, 'week_3.html', context={'FIRST': FIRST,
-                                                           'SECOND': SECOND,
-                                                           'FIRD': FIRD,
-                                                           'FORTH': FORTH})
+                return render(request, 'week_3.html', context={'error': 'Ошибка данных'})
         except:
             return render(request, 'week_3.html', context={'error': 'Ошибка данных'})
     else:
@@ -60,6 +82,7 @@ def week_3(request):
 
 
 def week_4_1(request):
+    logs.append([datetime.datetime.now().strftime("%m/%d, %H:%M"), get_client_ip(request)])
     if request.method == 'POST' and request.FILES['f']:
         try:
             myfile = request.FILES['f']
@@ -72,7 +95,7 @@ def week_4_1(request):
                                                            'task_2': task_2,
                                                            'task_3': task_3,
                                                            'task_4': task_4,
-                                                           'task_5':task_5})
+                                                           'task_5': task_5})
         except:
             return render(request, 'week_4.html', context={'error': 'Ошибка данных'})
     else:
@@ -80,6 +103,7 @@ def week_4_1(request):
 
 
 def week_4_2(request):
+    logs.append([datetime.datetime.now().strftime("%m/%d, %H:%M"), get_client_ip(request)])
     if request.method == 'POST' and request.FILES['f']:
         try:
             myfile = request.FILES['f']
@@ -103,9 +127,11 @@ def week_4_2(request):
 
 
 def week_4(request):
+    logs.append([datetime.datetime.now().strftime("%m/%d, %H:%M"), get_client_ip(request)])
     return render(request, 'week_4.html', context={'#': '#'})
 
 
 def week_5(request):
+    logs.append([datetime.datetime.now().strftime("%m/%d, %H:%M"), get_client_ip(request)])
     return render(request, 'week_5.html', context={'#': '#'})
 

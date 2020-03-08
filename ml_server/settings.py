@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'OpenEdu.apps.OpeneduConfig',
     'main',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
