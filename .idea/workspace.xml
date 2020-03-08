@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2da7a155-31ba-4fca-b4b6-b95e31fa382a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ml/week3.py" beforeDir="false" afterPath="$PROJECT_DIR$/ml/week3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml/week4.py" beforeDir="false" afterPath="$PROJECT_DIR$/ml/week4.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +198,8 @@
       <workItem from="1583541362545" duration="2178000" />
       <workItem from="1583543586011" duration="57000" />
       <workItem from="1583543654913" duration="18000" />
-      <workItem from="1583543876818" duration="3261000" />
+      <workItem from="1583543876818" duration="3659000" />
+      <workItem from="1583678641084" duration="670000" />
     </task>
     <servers />
   </component>
@@ -221,26 +219,26 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="263" y="311" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1583542497275" />
-    <state width="914" height="128" key="GridCell.Tab.0.bottom" timestamp="1583547178905">
+    <state width="914" height="128" key="GridCell.Tab.0.bottom" timestamp="1583547536492">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="914" height="128" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1583547178905" />
-    <state width="914" height="128" key="GridCell.Tab.0.center" timestamp="1583547178904">
+    <state width="914" height="128" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1583547536492" />
+    <state width="914" height="128" key="GridCell.Tab.0.center" timestamp="1583547536492">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="914" height="128" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1583547178904" />
-    <state width="914" height="128" key="GridCell.Tab.0.left" timestamp="1583547178903">
+    <state width="914" height="128" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1583547536492" />
+    <state width="914" height="128" key="GridCell.Tab.0.left" timestamp="1583547536492">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="914" height="128" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1583547178903" />
-    <state width="914" height="128" key="GridCell.Tab.0.right" timestamp="1583547178905">
+    <state width="914" height="128" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1583547536492" />
+    <state width="914" height="128" key="GridCell.Tab.0.right" timestamp="1583547536492">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="914" height="128" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1583547178905" />
-    <state x="24" y="384" width="688" height="342" key="com.intellij.ide.util.TipDialog" timestamp="1583543876815">
+    <state width="914" height="128" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1583547536492" />
+    <state x="24" y="384" width="688" height="342" key="com.intellij.ide.util.TipDialog" timestamp="1583678642989">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="24" y="384" width="688" height="342" key="com.intellij.ide.util.TipDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1583543876815" />
+    <state x="24" y="384" width="688" height="342" key="com.intellij.ide.util.TipDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1583678642989" />
     <state x="46" y="150" width="857" height="813" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1583360307933">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>

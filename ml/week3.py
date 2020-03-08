@@ -30,12 +30,14 @@ def week3(path, path_1, path_2):
     fig, ax = plt.subplots()
     ax.scatter(x_transformed[:, 0], x_transformed[:, 1])
     fig.savefig('static/1.png')
+    plt.close(fig)
     scores = np.genfromtxt(path_1, delimiter=';')
     loadings = np.genfromtxt(path_2, delimiter=';')
     values = np.dot(scores, loadings.T)
     fig, ax = plt.subplots()
     ax.imshow(values, cmap='Greys_r')
     fig.savefig('static/2.png')
+    plt.close(fig)
     return FIRST, SECOND, FIRD, FORTH
 
 

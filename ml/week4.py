@@ -31,8 +31,6 @@ def week4_2(path_2, candy_1, candy_2, array):
     data_candy_1 = np.array(data_candy.loc[candy_1]).reshape(1, -1)
     data_candy_2 = np.array(data_candy.loc[candy_2]).reshape(1, -1)
     X_candy = np.array(X_candy)
-    print(data_candy_1)
-    print(X_candy[0])
     lr.fit(X_candy, Y_candy)
     task_6 = round(lr.predict(data_candy_1)[0], 3)
     task_7 = round(lr.predict(data_candy_2)[0], 3)
