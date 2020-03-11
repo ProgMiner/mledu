@@ -1,5 +1,5 @@
 from django.urls import path
-from . import views
+from . import views, views_2
 from .views import Logs
 
 app_name = "articles"
@@ -11,6 +11,8 @@ urlpatterns = [
     path('week_4', views.week_4, name="week_4"),
     path('week_4_1', views.week_4_1, name="week_4_1"),
     path('week_4_2', views.week_4_2, name="week_4_2"),
-    path('week_5', views.week_5, name="week_5"),
     path('logs', Logs.as_view()),
+    path('week_5', views_2.week_5, name="week_5"),
+    path('week_6', views_2.week_6, name="week_6"),
+
 ]
