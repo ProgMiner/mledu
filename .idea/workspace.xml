@@ -37,7 +37,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../OpenEdu" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -227,6 +227,7 @@
       <workItem from="1583955197888" duration="10943000" />
       <workItem from="1584038282646" duration="702000" />
       <workItem from="1584544609795" duration="46000" />
+      <workItem from="1584545142615" duration="667000" />
     </task>
     <servers />
   </component>
