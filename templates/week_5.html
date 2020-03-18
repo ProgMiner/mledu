@@ -16,10 +16,6 @@
         <ul>
             <form enctype="multipart/form-data" method="post" action="/week_5">
                 {% csrf_token %}
-                <li><h3>Введите ключ доступа</h3></li>
-                <p><input type="text" name="KEY">
-                     <em><font color="#8b0000">Как его получить написано под списком всех недель.</font> </em>
-                    <br>
                 <li><h3>Загрузите тренировочный датасет</h3></li>
                 <p><input type="file" name="f" required>
                     <br>
