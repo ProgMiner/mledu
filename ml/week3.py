@@ -6,8 +6,6 @@ import os
 
 
 def week3(path, path_1, path_2):
-    os.remove('static/1.png')
-    os.remove('static/2.png')
     data = pd.read_csv(path, names=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
     data = np.array(data)
     pca_1 = PCA(n_components=1, svd_solver='full')
