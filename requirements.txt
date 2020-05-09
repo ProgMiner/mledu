@@ -1,4 +1,6 @@
 pandas
+imutils
+opencv-python
 
 matplotlib
 
@@ -19,7 +21,3 @@ whitenoise
 django-cors-headers
 
 sklearn
-
-imutils
-
-opencv-python
