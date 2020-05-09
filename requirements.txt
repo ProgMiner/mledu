@@ -1,5 +1,7 @@
 pandas
+
 imutils
+
 opencv-python
 
 matplotlib

@@ -1,5 +1,6 @@
 from sklearn.model_selection import train_test_split
 from sklearn.svm import LinearSVC
+from imutils import paths
 import cv2
 import os
 import numpy as np
@@ -7,7 +8,6 @@ from sklearn.metrics import f1_score
 
 
 def week7(rand: int, c, t0: int, t1: int, t2: int, images: list):
-    """
     def extract_histogram(image, bins=(8, 8, 8)):
         hist = cv2.calcHist([image], [0, 1, 2], None, bins, [0, 256, 0, 256,
                                                              0, 256])
@@ -51,4 +51,3 @@ def week7(rand: int, c, t0: int, t1: int, t2: int, images: list):
         predictions.append(prediction[0])
     a5 = predictions
     return a1, a2, a3, a4, a5
-    """
