@@ -1,6 +1,5 @@
 from sklearn.model_selection import train_test_split
 from sklearn.svm import LinearSVC
-from imutils import paths
 import os
 import numpy as np
 from sklearn.metrics import f1_score
