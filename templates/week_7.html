@@ -14,15 +14,43 @@
 
 {% block content %}
 <div class="col-sm-9">
-      <hr>
+            <hr>
       <h2>Неделя 7</h2>
-        <h3>Coming soon...</h3>
-        <img src="https://www.stihi.ru/pics/2019/06/01/2829.jpg">
+
+        <br>
+        <ul>
+            <form enctype="multipart/form-data" method="post" action="/week_7">
+                {% csrf_token %}
+                    <li><h3>Введите значение C</h3></li>
+                 <input type="text" name="c" value="0.228">
+                <li><h3>Введите значение random_state</h3></li>
+                 <input type="text" name="rand" value="322">
+                <li><h3>Введите номер первого коэф. гиперплоскати</h3></li>
+                 <input type="text" name="t1" value="256">
+                <li><h3>Введите номер второго коэф. гиперплоскати</h3></li>
+                 <input type="text" name="t2" value="356">
+                <li><h3>Введите номер третьего коэф. гиперплоскати</h3></li>
+                 <input type="text" name="t3" value="156">
+
+                 <li><h3>Введите названия файлов с изображениями</h3></li>
+                 <input type="text" name="images" value="cat.1046.jpg, dog.1025.jpg..">
+                <em><font color="#8b0000"> Через запятую и без лишних пробельных символов.</font> </em>
+                <br>
+                <br>
+                    <input type="submit" value="Отправить"></p>
+            </form>
+            {% if a1%}
+                <h2>1-Значение первого коэффициента построенной гиперплоскости: <b> {{ a1 }}</b></h2>
+                 <h2>2-Значение второго коэффициента построенной гиперплоскости: <b> {{ a2 }}</b></h2>
+                 <h2>3-Значение третьего коэффициента построенной гиперплоскости:: <b> {{ a3 }}</b></h2>
+                 <h2>4-Среднее значение метрик F1: <b> {{ a4 }}</b></h2>
+                 <h2>5-Предсказанные классы фоток: <b> {{ a5 }}</b></h2>
+           {% endif %}
+        </ul>
+
     <br><br>
       <hr>
     </div>
-
-
 <div>
     <iframe src="https://money.yandex.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D1%82%D1%8C%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82&targets-hint=&default-sum=&button-text=14&payment-type-choice=on&comment=on&hint=&successURL=&quickpay=shop&account=4100112039044109" width="50%" height="307" frameborder="0" allowtransparency="true" scrolling="no"></iframe></div>
 </div>

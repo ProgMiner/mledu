@@ -1,21 +1,12 @@
 from django.shortcuts import render, HttpResponse
 from django.core.files.storage import FileSystemStorage
-from rest_framework.response import Response
-from rest_framework.views import APIView
-from rest_framework import serializers
 from ml import week2
 from ml import week3
 from ml import week4
 import datetime
-from ml_server.settings import STATIC_URL
 import os
 
 logs = []
-
-
-class Logs(APIView):
-    def get(self, request):
-        return Response({"logs": str(logs)})
 
 
 def get_client_ip(request):

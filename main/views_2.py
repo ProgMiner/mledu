@@ -87,6 +87,19 @@ def week_62(request):
 
 
 def week_7(request):
+    if request.method == 'POST':
+        rand = request.POST.get('rand')
+        c = request.POST.get('c')
+        t1 = request.POST.get('t1')
+        t2 = request.POST.get('t2')
+        t3 = request.POST.get('t3')
+        images = request.POST.get('images').split(',')
+        try:
+            a1, a2, a3, a4, a5 = week7.week7(rand, c, t1, t2, t3, images)
+            return render(request, 'week_7.html', context={"a1": a1, "a2": a2, "a3": a3, "a4": a4, "a5": a5})
+        except Exception as exept:
+            print(exept)
+            return render(request, 'week_7.html', context={'error': 'Ошибка данных'})
     return render(request, 'week_7.html')
 
 
