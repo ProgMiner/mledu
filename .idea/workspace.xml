@@ -2,26 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2da7a155-31ba-4fca-b4b6-b95e31fa382a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OpenEdu/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OpenEdu/.idea/OpenEdu.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OpenEdu/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OpenEdu/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OpenEdu/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OpenEdu/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OpenEdu/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OpenEdu/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OpenEdu/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OpenEdu/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OpenEdu/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OpenEdu/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/views_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/views_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ml/week7.py" beforeDir="false" afterPath="$PROJECT_DIR$/ml/week7.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ml_server/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ml_server/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/s" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/week_7.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/week_7.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -265,7 +246,7 @@
       <workItem from="1585941135660" duration="27000" />
       <workItem from="1587158600037" duration="11725000" />
       <workItem from="1588274669077" duration="218000" />
-      <workItem from="1589037373780" duration="9851000" />
+      <workItem from="1589037373780" duration="10212000" />
     </task>
     <servers />
   </component>
