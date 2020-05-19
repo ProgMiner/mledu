@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2da7a155-31ba-4fca-b4b6-b95e31fa382a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Aptfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/week_7.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/week_7.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -248,6 +247,7 @@
       <workItem from="1587158600037" duration="11725000" />
       <workItem from="1588274669077" duration="218000" />
       <workItem from="1589037373780" duration="13037000" />
+      <workItem from="1589911887493" duration="58000" />
     </task>
     <servers />
   </component>
@@ -308,10 +308,10 @@
       <screen x="0" y="0" width="1920" height="1039" />
     </state>
     <state x="456" y="155" key="SettingsEditor/0.0.1920.1039@0.0.1920.1039" timestamp="1585941162726" />
-    <state x="24" y="352" width="688" height="342" key="com.intellij.ide.util.TipDialog" timestamp="1589037373795">
+    <state x="24" y="352" width="688" height="342" key="com.intellij.ide.util.TipDialog" timestamp="1589911890124">
       <screen x="0" y="0" width="1920" height="1039" />
     </state>
-    <state x="24" y="352" key="com.intellij.ide.util.TipDialog/0.0.1920.1039@0.0.1920.1039" timestamp="1589037373795" />
+    <state x="24" y="352" key="com.intellij.ide.util.TipDialog/0.0.1920.1039@0.0.1920.1039" timestamp="1589911890124" />
     <state x="24" y="384" width="688" height="342" key="com.intellij.ide.util.TipDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1584544609800" />
     <state x="46" y="150" width="857" height="813" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1583360307933">
       <screen x="0" y="27" width="1920" height="1053" />
