@@ -16,10 +16,36 @@
 <div class="col-sm-9">
       <hr>
       <h2>Неделя 9</h2>
-        <h3>Coming soon...</h3>
-        <img src="https://www.stihi.ru/pics/2019/06/01/2829.jpg">
-    <br><br>
-      <hr>
+        <ul>
+            <form enctype="multipart/form-data" method="post" action="/week_9">
+                {% csrf_token %}
+                <li><h3>Загрузите csv файл с данными</h3></li>
+                <p><input type="file" name="f" required>
+                    <em><font color="#8b0000"> Копируете данные из под таблички, вставляете в Блокнот нажимаете сохранить как fileName.csv</font> </em>
+                    <br>
+                <li><h3>Введите x координату для первого центроида</h3></li>
+                    <input type="text" name="x_1" value="12.2">
+                <li><h3>Введите y координату для первого центроида</h3></li>
+                    <input type="text" name="y_1" value="12.2">
+                <li><h3>Введите x координату для второго центроида</h3></li>
+                    <input type="text" name="x_2" value="12.2">
+                <li><h3>Введите y координату для второго центроида</h3></li>
+                    <input type="text" name="y_2" value="12.2">
+                <li><h3>Введите x координату для третьего центроида</h3></li>
+                    <input type="text" name="x_3" value="12.2">
+                <li><h3>Введите y координату для третьего центроида</h3></li>
+                    <input type="text" name="y_3" value="12.2">
+                <br>
+                <br>
+                    <input type="submit" value="Отправить"></p>
+            </form>
+        </ul>
+            {% if answer%}
+                <h2>1-Список классов: <b> {{ answer }}</b></h2>
+                 <h2>2-Расстояние: <b> {{ dist }}</b></h2>
+           {% endif %}
+        <br><br>
+        <hr>
     </div>
 
 

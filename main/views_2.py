@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.core.files.storage import FileSystemStorage
-from ml import week5, week6, week7, week8
+from ml import week5, week6, week7, week8, week9
 import datetime
 import os
 from .views import logs, get_client_ip
@@ -108,4 +108,24 @@ def week_8(request):
 
 
 def week_9(request):
-    return render(request, 'week_9.html')
+    if request.method == 'POST' and request.FILES['f']:
+        x_1 = request.POST.get('x_1')
+        x_2 = request.POST.get('x_2')
+        x_3 = request.POST.get('x_3')
+        y_1 = request.POST.get('y_1')
+        y_2 = request.POST.get('y_2')
+        y_3 = request.POST.get('y_3')
+        myfile = request.FILES['f']
+        fs = FileSystemStorage()
+        filename = fs.save(myfile.name, myfile)
+        path = fs.path(filename)
+        try:
+            answer, dist = week9.week9(path, x_1, y_1, x_2, y_2, x_3, y_3)
+            os.remove(path)
+            return render(request, 'week_9.html', context={'answer': answer,
+                                                           'dist': dist})
+        except:
+            os.remove(path)
+            return render(request, 'week_9.html', context={'error': 'Ошибка данных'})
+    else:
+        return render(request, 'week_9.html')
