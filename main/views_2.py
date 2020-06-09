@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.core.files.storage import FileSystemStorage
+
 from ml import week5, week6, week7, week8, week9
 import datetime
 import os
@@ -103,8 +104,21 @@ def week_7(request):
     return render(request, 'week_7.html')
 
 
-def week_8(request):
-    return render(request, 'week_8.html')
+def week_81(request):
+    if request.method == 'POST':
+        try:
+            return render(request, 'week_8-1.html', context=week8.week8_1(request.POST.get('data')))
+
+        except Exception as ex:
+            print(ex)
+
+            return render(request, 'week_8-1.html', context={'error': 'Ошибка данных'})
+    else:
+        return render(request, 'week_8-1.html')
+
+
+def week_82(request):
+    return render(request, 'week_8-2.html')
 
 
 def week_9(request):

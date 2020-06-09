@@ -1,77 +1,79 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Ml_EDU</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <style>
-    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
-    .row.content {
-        height: 1800px;
-    }
-    /* Set gray background color and 100% height */
-    .sidenav {
-      background-color: #f1f1f1;
-      height: 100%;
-    }
+    <title>Ml_EDU</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+        .row.content {
+            height: 1800px;
+        }
 
-    /* Set black background color, white text and some padding */
-    footer {
-      background-color: #555;
-      color: white;
-      padding: 5px;
-    }
+        /* Set gray background color and 100% height */
+        .sidenav {
+            background-color: #f1f1f1;
+            height: 100%;
+        }
 
-    /* On small screens, set height to 'auto' for sidenav and grid */
-    @media screen and (max-width: 650px) {
-      .sidenav {
-        height: auto;
-        padding: 15px;
-      }
-      .row.content {
-          height: auto;
-      }
-    }
+        /* Set black background color, white text and some padding */
+        footer {
+            background-color: #555;
+            color: white;
+            padding: 5px;
+        }
 
-  </style>
+        /* On small screens, set height to 'auto' for sidenav and grid */
+        @media screen and (max-width: 650px) {
+            .sidenav {
+                height: auto;
+                padding: 15px;
+            }
+
+            .row.content {
+                height: auto;
+            }
+        }
+
+    </style>
 </head>
 <body>
 
 <div class="container-fluid">
-  <div class="row content">
-    <div class="col-sm-3 sidenav">
-      <div class="name"><h4>Машинное обучение</h4></div>
-      <ul class="nav nav-pills nav-stacked">
+    <div class="row content">
+        <div class="col-sm-3 sidenav">
+            <div class="name"><h4>Машинное обучение</h4></div>
+            <ul class="nav nav-pills nav-stacked">
 
-          {% block li %}
+                {% block li %}
 
-          {% endblock %}
-      <li>
+                {% endblock %}
 
-              <b><font color="#8b0000">Донаты также принимаются на карту </font><font color="#4682b4"> 4377 7237 4820 7580.</font></b>
-            </em>
+                <li>
 
-      </li>
-          <h3><font color = "#8b0000">{{ error }}</font></h3>
+                    <b><font color="#8b0000">Донаты также принимаются на карту</font>
+                        <font color="#4682b4">4377&nbsp;7237&nbsp;4820&nbsp;7580</font>.</b>
 
-      <br>
-      <br>
-        <em><font color="#8b0000"><a href="https://vk.com/jenia44">По вопросам: VK</a> </font></em>
-      </ul>
+                </li>
+                <h3><font color="#8b0000">{{ error }}</font></h3>
 
+                <br>
+                <br>
+                <em><font color="#8b0000"><a href="https://vk.com/jenia44">По вопросам: VK</a> </font></em>
+            </ul>
+
+        </div>
+        {% block content %}
+
+        {% endblock %}
     </div>
-      {% block content %}
-
-      {% endblock %}
-  </div>
 </div>
 
 <footer class="container-fluid">
-  <p>Evgenii Gutin(C) - 2020</p>
+    <p>Evgenii Gutin(C) - 2020</p>
 </footer>
 
 </body>

@@ -121,4 +121,3 @@ def week_4_2(request):
 def week_4(request):
     logs.append([datetime.datetime.now().strftime("%m/%d, %H:%M"), get_client_ip(request)])
     return render(request, 'week_4.html', context={'#': '#'})
-

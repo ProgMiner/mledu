@@ -37,5 +37,3 @@ def week3(path, path_1, path_2):
     fig.savefig('static/2.png')
     plt.close(fig)
     return FIRST, SECOND, FIRD, FORTH
-
-

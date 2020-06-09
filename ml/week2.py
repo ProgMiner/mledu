@@ -16,5 +16,3 @@ def res(path, star):
     distances = [dist.pairwise(np.concatenate(([i], [star])))[0][1] for i in scaled_data]
     min_distance = min(distances)
     return round(mean, 3), round(min_distance, 3)
-
-

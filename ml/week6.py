@@ -9,17 +9,17 @@ def week6_1(spam, ham, email, words, words_to_num):
     data = [spam, ham]
     emails = email
     words = words
-    t611 = round(emails[0]/np.sum(emails), 3)
-    spam_prob = math.log(emails[0]/np.sum(emails))
+    t611 = round(emails[0] / np.sum(emails), 3)
+    spam_prob = math.log(emails[0] / np.sum(emails))
     spam_freq = []
     for i in words_to_num:
         if i == -1:
             spam_freq.append(1)
         else:
-            spam_freq.append(data[0][i]+1)
-    spam_znam = 10+words[0]
+            spam_freq.append(data[0][i] + 1)
+    spam_znam = 10 + words[0]
     for i in spam_freq:
-        spam_prob += math.log(i/spam_znam)
+        spam_prob += math.log(i / spam_znam)
     ham_prob = math.log(emails[1] / np.sum(emails))
     ham_freq = []
     for i in words_to_num:
@@ -30,7 +30,7 @@ def week6_1(spam, ham, email, words, words_to_num):
     ham_znam = 10 + words[1]
     for i in ham_freq:
         ham_prob += math.log(i / ham_znam)
-    spam = round(1/(1+math.exp(ham_prob-spam_prob)),3)
+    spam = round(1 / (1 + math.exp(ham_prob - spam_prob)), 3)
     t612 = (round(spam_prob, 3))
     t613 = (round(ham_prob, 3))
     t614 = spam

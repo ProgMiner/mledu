@@ -1,9 +1,9 @@
 import numpy as np
 import pandas as pd
-from sklearn.cluster import  KMeans
+from sklearn.cluster import KMeans
 
 
-def week9(csv, x_1, y_1, x_2,y_2, x_3, y_3):
+def week9(csv, x_1, y_1, x_2, y_2, x_3, y_3):
     data = pd.read_csv(csv, delimiter=',', index_col='Object')
     coords = data.drop('Cluster', axis=1)
     centroid = np.array([[x_1, y_1], [x_2, y_2], [x_3, y_3]])
@@ -20,4 +20,3 @@ def week9(csv, x_1, y_1, x_2,y_2, x_3, y_3):
             my_claster.append(dist[i][0].tolist())
 
     return answers, round(np.mean(my_claster), 3)
-

@@ -14,7 +14,7 @@ urlpatterns = [
     path('week_61', views_2.week_61, name="week_61"),
     path('week_62', views_2.week_62, name="week_62"),
     path('week_7', views_2.week_7, name="week_7"),
-    path('week_8', views_2.week_8, name="week_8"),
+    path('week_81', views_2.week_81, name="week_81"),
+    path('week_82', views_2.week_82, name="week_82"),
     path('week_9', views_2.week_9, name="week_9"),
-
 ]

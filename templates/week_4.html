@@ -8,19 +8,20 @@
     <li><a href="/week_61">Неделя 6-1</a></li>
     <li><a href="/week_62">Неделя 6-2</a></li>
     <li><a href="/week_7">Неделя 7</a></li>
-    <li><a href="/week_8">Неделя 8</a></li>
+    <li><a href="/week_81">Неделя 8-1</a></li>
+    <li><a href="/week_82">Неделя 8-2</a></li>
     <li><a href="/week_9">Неделя 9</a></li>
 {% endblock %}
 
 {% block content %}
-<div class="col-sm-9">
+    <div class="col-sm-9">
         <hr>
         <h2>Неделя 4</h2>
         <br>
         <ul>
-            <h3><font color="#8b0000">4-1</font> </h3>
+            <h3><font color="#8b0000">4-1</font></h3>
             <li><h3>Сохраните таблицу</h3></li>
-                <em>Откройте любой текстовый редактор, вставьте данные из таблицы и сохраните в формате <b>FileName.csv</b></em>
+            <em>Откройте любой текстовый редактор, вставьте данные из таблицы и сохраните в формате <b>FileName.csv</b></em>
             <form enctype="multipart/form-data" method="post" action="/week_4_1">
                 {% csrf_token %}
                 <li><h3>Загрузите вашу таблицу</h3></li>
@@ -29,41 +30,43 @@
                     <input type="submit" value="Отправить"></p>
             </form>
         </ul>
-            {% if task_1%}
+        {% if task_1 %}
             <h2>1-Выборочное среднее Х: <b>{{ task_1 }}</b></h2>
             <h2>2-Выборочное среднее У: <b> {{ task_2 }}</b></h2>
             <h2>3-Тета 1: <b> {{ task_3 }}</b></h2>
             <h2>4-Тета 0: <b> {{ task_4 }}</b></h2>
             <h2>5-Точность модели: <b> {{ task_5 }}</b></h2>
-            <h4><em><font color="#8b0000">Для получения подробного объяснения и кода по данной неделе необходимо пожертвовать любую сумму и указать в комментрие номер недели и ссылку на вк/email</font> </em></h4>
+            <h4><em><font color="#8b0000">Для получения подробного объяснения и кода по данной неделе необходимо
+                пожертвовать любую сумму и указать в комментрие номер недели и ссылку на вк/email</font> </em></h4>
 
-            {% endif %}
-<br>
-         <ul>
-             <h3><font color="#8b0000">4-2</font> </h3>
-             <form enctype="multipart/form-data" method="post" action="/week_4_2">
+        {% endif %}
+        <br>
+        <ul>
+            <h3><font color="#8b0000">4-2</font></h3>
+            <form enctype="multipart/form-data" method="post" action="/week_4_2">
                 {% csrf_token %}
                 <li><h3>Загрузите вашу таблицу</h3></li>
                 <p><input type="file" name="f" required>
                     <br>
-                    <li><h3>Введите первую конфету</h3></li>
-                 <input type="text" name="candy_1" value="Конфета 1">
-                 <em><font color="#8b0000"> Без лишних пробельных символов в конце.</font> </em>
-                 <li><h3>Введите вторую конфету</h3></li>
-                 <input type="text" name="candy_2" value="Конфета 2">
-                 <em><font color="#8b0000"> Без лишних пробельных символов в конце.</font> </em>
-                 <li><h3>Введите параметры</h3></li>
-                 <input type="text" name="array" value="2, 2, 8,..">
-                 <input type="submit" value="Отправить"></p>
+                <li><h3>Введите первую конфету</h3></li>
+                <input type="text" name="candy_1" value="Конфета 1">
+                <em><font color="#8b0000"> Без лишних пробельных символов в конце.</font> </em>
+                <li><h3>Введите вторую конфету</h3></li>
+                <input type="text" name="candy_2" value="Конфета 2">
+                <em><font color="#8b0000"> Без лишних пробельных символов в конце.</font> </em>
+                <li><h3>Введите параметры</h3></li>
+                <input type="text" name="array" value="2, 2, 8,..">
+                <input type="submit" value="Отправить"></p>
             </form>
         </ul>
-            {% if task_8%}
-                <h2>6-Предсказание для первой конфеты: <b> {{ task_6 }}</b></h2>
+        {% if task_8 %}
+            <h2>6-Предсказание для первой конфеты: <b> {{ task_6 }}</b></h2>
             <h2>7-Предсказание для второй конфеты: <b> {{ task_7 }}</b></h2>
             <h2>8-Предсказание для конфеты с параметрами: <b> {{ task_8 }}</b></h2>
-                <h4><em><font color="#8b0000">Для получения подробного объяснения и кода по данной неделе необходимо пожертвовать любую сумму и указать в комментрие номер недели и ссылку на вк/email</font> </em></h4>
+            <h4><em><font color="#8b0000">Для получения подробного объяснения и кода по данной неделе необходимо
+                пожертвовать любую сумму и указать в комментрие номер недели и ссылку на вк/email</font> </em></h4>
 
-            {% endif %}
+        {% endif %}
         <br><br>
         <hr>
 
