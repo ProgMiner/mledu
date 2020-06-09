@@ -4,7 +4,7 @@ from pandas import DataFrame
 
 
 def week8_1(data):
-    data = list(map(lambda s: s.strip().split('\t'), data.strip().split('\n')))
+    data = list(map(lambda s: s.strip().split(), data.strip().split('\n')))
 
     header = data[0]
     data_table = dict([(h, []) for h in header])

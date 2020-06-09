@@ -110,9 +110,7 @@ def week_81(request):
             return render(request, 'week_8-1.html', context=week8.week8_1(request.POST.get('data')))
 
         except Exception as ex:
-            print(ex)
-
-            return render(request, 'week_8-1.html', context={'error': 'Ошибка данных'})
+            return render(request, 'week_8-1.html', context={'error': 'Ошибка данных', 'exception': ex})
     else:
         return render(request, 'week_8-1.html')
 
