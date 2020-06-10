@@ -1,10 +1,12 @@
-from django.shortcuts import render, HttpResponse
+import datetime
+import os
+
 from django.core.files.storage import FileSystemStorage
+from django.shortcuts import render
+
 from ml import week2
 from ml import week3
 from ml import week4
-import datetime
-import os
 
 logs = []
 

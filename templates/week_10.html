@@ -19,6 +19,50 @@
 
 {% block content %}
     <h2>Неделя 10</h2>
-    <h3>Coming soon...</h3>
-    <img src="https://www.stihi.ru/pics/2019/06/01/2829.jpg">
+    <em style="border-bottom: 1px solid red;">by <a href="https://byprogminer.ru/" target="_blank">ProgMiner</a></em>
+
+    <br>
+    <ul>
+        <form enctype="multipart/form-data" method="post" action="/week_10">
+            {% csrf_token %}
+            <li><h3>Введите параметр <i>C</i></h3></li>
+            <input type="text" name="C" value="1.75">
+            <li><h3>Введите параметр <i>random_state</i></h3></li>
+            <input type="text" name="random_state" value="195">
+            <li><h3>Введите параметр <i>criterion</i></h3></li>
+            <input type="text" name="criterion" value="entropy">
+            <li><h3>Введите параметр <i>min_samples_leaf</i></h3></li>
+            <input type="text" name="min_samples_leaf" value="10">
+            <li><h3>Введите параметр <i>max_leaf_nodes</i></h3></li>
+            <input type="text" name="max_leaf_nodes" value="20">
+            <li><h3>Введите параметр <i>n_estimators</i></h3></li>
+            <input type="text" name="n_estimators" value="12">
+            <li><h3>Введите параметр <i>solver</i></h3></li>
+            <input type="text" name="solver" value="lbfgs">
+            <li><h3>Введите параметр <i>cv</i></h3></li>
+            <input type="text" name="cv" value="2">
+            <li><h3>Введите класс, верятность отнесения к которому необходимо определить</h3></li>
+            <input type="text" name="class" value="1">
+            <em><font color="#8b0000"><b>0</b> или <b>1</b></font></em>
+
+            <li><h3>Введите названия файлов с изображениями через запятую</h3></li>
+            <input type="text" name="images" value="dog.1032.jpg, cat.1048.jpg, dog.1024.jpg, cat.1016.jpg">
+            <em><font color="#8b0000">Без лишних пробельных символов.</font></em>
+            <br>
+            <br>
+            <input type="submit" value="Отправить">
+        </form>
+    </ul>
+
+    {% if accuracy %}
+        <hr>
+        Вообще-то, архитектурно это не очень верно.<br>
+        <small><i>&copy; Михаил Гольбах</i></small>
+
+        <h2>Доля правильной классификации: {{ accuracy }}</h2>
+
+        {% for image, proba in probas %}
+            <h2>Вероятность отнесения изображения <b>{{ image }}</b> к классу: {{ proba }}</h2>
+        {% endfor %}
+    {% endif %}
 {% endblock %}

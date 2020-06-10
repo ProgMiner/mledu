@@ -30,7 +30,7 @@ def generate(path, saveY=True):
     if saveY:
         Y = [0 if x == 'cat' else 1 for x in labels]
 
-        data = dict([('trainData', trainData), ('Y', Y)])
+        data = {'trainData': trainData, 'Y': Y}
         file = open(f'{path}.json', 'w')
         json.dump(data, file)
         file.close()

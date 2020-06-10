@@ -1,9 +1,10 @@
-from django.shortcuts import render
-from django.core.files.storage import FileSystemStorage
-
-from ml import week5, week6, week7, week8, week9
 import datetime
 import os
+
+from django.core.files.storage import FileSystemStorage
+from django.shortcuts import render
+
+from ml import week5, week6, week7, week8, week9, week10
 from .views import logs, get_client_ip
 
 
@@ -161,7 +162,25 @@ def week_9(request):
 
 
 def week_10(request):
-    return render(request, 'week_10.html')
+    if request.method == 'POST':
+        try:
+            return render(request, 'week_10.html', context=week10.week10(float(request.POST.get('C')),
+                                                                         int(request.POST.get('random_state')),
+                                                                         request.POST.get('criterion'),
+                                                                         int(request.POST.get('min_samples_leaf')),
+                                                                         int(request.POST.get('max_leaf_nodes')),
+                                                                         int(request.POST.get('n_estimators')),
+                                                                         request.POST.get('solver'),
+                                                                         int(request.POST.get('cv')),
+                                                                         int(request.POST.get('class')),
+                                                                         [i.strip() for i in
+                                                                          request.POST.get('images').split(',')]))
+
+        except Exception as ex:
+            print(ex)
+            return render(request, 'week_10.html', context={'error': 'Ошибка данных'})
+    else:
+        return render(request, 'week_10.html')
 
 
 def week_11(request):
