@@ -18,8 +18,7 @@
 
 {% block content %}
     <h2>Неделя 8-1</h2>
-    <em style="border-bottom: 1px solid red;">by <a href="https://byprogminer.ru/"
-                                                    target="_blank">ProgMiner</a></em>
+    <em style="border-bottom: 1px solid red;">by <a href="https://byprogminer.ru/" target="_blank">ProgMiner</a></em>
 
     <br>
     <form enctype="multipart/form-data" method="post" action="/week_81">
@@ -92,9 +91,5 @@ Burgers	1	1	No</textarea>
         {% for param, ig in ig_demand_param %}
             <h2>IG(Demand|{{ param }}) = {{ ig }}</h2>
         {% endfor %}
-    {% endif %}
-
-    {% if exception %}
-        <!-- {{ exception }} -->
     {% endif %}
 {% endblock %}

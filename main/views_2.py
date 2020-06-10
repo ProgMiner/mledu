@@ -24,17 +24,17 @@ def week_5(request):
         path2 = fs.path(filename_1)
         try:
             FIRST, SECOND, FIRD, FORTH, FITH = week5.week5(path, path2, dc1, dc2, dc3, candy1, candy2)
-            os.remove(path)
-            os.remove(path2)
             return render(request, 'week_5.html', context={'FIRST': FIRST,
                                                            'SECOND': SECOND,
                                                            'FIRD': FIRD,
                                                            'FORTH': FORTH,
                                                            'FITH': FITH})
-        except:
+        except Exception as ex:
+            print(ex)
+            return render(request, 'week_5.html', context={'error': 'Ошибка данных'})
+        finally:
             os.remove(path)
             os.remove(path2)
-            return render(request, 'week_5.html', context={'error': 'Ошибка данных'})
     else:
         return render(request, 'week_5.html')
 
@@ -59,7 +59,8 @@ def week_61(request):
         try:
             t611, t612, t613, t614 = week6.week6_1(spam, ham, email, words, words_to_num)
             return render(request, 'week_6-1.html', context={"t611": t611, "t612": t612, "t613": t613, "t614": t614})
-        except Exception:
+        except Exception as ex:
+            print(ex)
             return render(request, 'week_6-1.html', context={'error': 'Ошибка данных'})
     return render(request, 'week_6-1.html')
 
@@ -80,9 +81,10 @@ def week_62(request):
             obj[i] = int(obj[i])
         try:
             t621, t622, t623, t624, t625, t626 = week6.week6_2(x_0, y_0, cl, obj)
-            return render(request, 'week_6-2.html', context={"t621": t621, "t622": t622, "t623": t623, "t624": t624
-                , "t625": t625, "t626": t626})
-        except Exception:
+            return render(request, 'week_6-2.html', context={"t621": t621, "t622": t622, "t623": t623, "t624": t624,
+                                                             "t625": t625, "t626": t626})
+        except Exception as ex:
+            print(ex)
             return render(request, 'week_6-2.html', context={'error': 'Ошибка данных'})
     return render(request, 'week_6-2.html')
 
@@ -98,8 +100,8 @@ def week_7(request):
         try:
             a1, a2, a3, a4, a5 = week7.week7(rand, c, t1, t2, t3, images)
             return render(request, 'week_7.html', context={"a1": a1, "a2": a2, "a3": a3, "a4": a4, "a5": a5})
-        except Exception as exept:
-            print(exept)
+        except Exception as ex:
+            print(ex)
             return render(request, 'week_7.html', context={'error': 'Ошибка данных'})
     return render(request, 'week_7.html')
 
@@ -108,9 +110,9 @@ def week_81(request):
     if request.method == 'POST':
         try:
             return render(request, 'week_8-1.html', context=week8.week8_1(request.POST.get('data')))
-
         except Exception as ex:
-            return render(request, 'week_8-1.html', context={'error': 'Ошибка данных', 'exception': ex})
+            print(ex)
+            return render(request, 'week_8-1.html', context={'error': 'Ошибка данных'})
     else:
         return render(request, 'week_8-1.html')
 
@@ -133,12 +135,13 @@ def week_9(request):
         path = fs.path(filename)
         try:
             answer, dist = week9.week9(path, x_1, y_1, x_2, y_2, x_3, y_3)
-            os.remove(path)
             return render(request, 'week_9.html', context={'answer': answer,
                                                            'dist': dist})
-        except:
-            os.remove(path)
+        except Exception as ex:
+            print(ex)
             return render(request, 'week_9.html', context={'error': 'Ошибка данных'})
+        finally:
+            os.remove(path)
     else:
         return render(request, 'week_9.html')
 
