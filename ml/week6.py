@@ -1,6 +1,7 @@
-import pandas as pd
-import numpy as np
 import math
+
+import numpy as np
+import pandas as pd
 from sklearn.neighbors import KNeighborsClassifier
 
 

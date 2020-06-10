@@ -1,8 +1,7 @@
-import pandas as pd
 import numpy as np
+import pandas as pd
 from matplotlib import pyplot as plt
 from sklearn.decomposition import PCA
-import os
 
 
 def week3(path, path_1, path_2):

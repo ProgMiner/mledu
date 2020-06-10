@@ -20,6 +20,7 @@
     <h2>Неделя 8-2</h2>
     <em style="border-bottom: 1px solid red;">by <a href="https://byprogminer.ru/" target="_blank">ProgMiner</a></em>
 
+    <br>
     <ul>
         <form enctype="multipart/form-data" method="post" action="/week_82">
             {% csrf_token %}
@@ -51,6 +52,10 @@
     </ul>
 
     {% if depth %}
+        <hr>
+        Получается, что так...<br>
+        <small><i>&copy; Юлий Пелевин</i></small>
+
         <h2>Количество <b>не больных</b> диабетом (0): {{ not_ill_count }}</h2>
         <h2>Количество <b>больных</b> диабетом (1): {{ ill_count }}</h2>
         <h2>Максимальная глубина дерева: {{ depth }}</h2>

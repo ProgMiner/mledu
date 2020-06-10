@@ -1,7 +1,7 @@
-import pandas as pd
 import numpy as np
-from sklearn.preprocessing import MinMaxScaler
+import pandas as pd
 from sklearn.neighbors import DistanceMetric
+from sklearn.preprocessing import MinMaxScaler
 
 
 def res(path, star):

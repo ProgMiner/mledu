@@ -1,6 +1,6 @@
 import pandas as pd
-from sklearn.linear_model import LogisticRegression
 from sklearn import metrics
+from sklearn.linear_model import LogisticRegression
 
 
 def week5(path, path2, dc1, dc2, dc3, candy1, candy2):
