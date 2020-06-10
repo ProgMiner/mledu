@@ -141,3 +141,15 @@ def week_9(request):
             return render(request, 'week_9.html', context={'error': 'Ошибка данных'})
     else:
         return render(request, 'week_9.html')
+
+
+def week_10(request):
+    return render(request, 'week_10.html')
+
+
+def week_11(request):
+    return render(request, 'week_11.html')
+
+
+def week_12(request):
+    return render(request, 'week_12.html')

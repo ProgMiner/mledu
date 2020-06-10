@@ -7,54 +7,47 @@
     <li><a href="/week_5">Неделя 5</a></li>
     <li><a href="/week_61">Неделя 6-1</a></li>
     <li><a href="/week_62">Неделя 6-2</a></li>
-    <li><a href="/week_7">Неделя 7</a></li>
+    <li><a href="/week_7">Неделя 7 (Python)</a></li>
     <li><a href="/week_81">Неделя 8-1</a></li>
-    <li><a href="/week_82">Неделя 8-2</a></li>
+    <li><a href="/week_82">Неделя 8-2 (Python)</a></li>
     <li class="active"><a href="/week_9">Неделя 9</a></li>
+    <li><a href="/week_10">Неделя 10 (Python)</a></li>
+    <li><a href="/week_11">Неделя 11</a></li>
+    <li><a href="/week_12">Неделя 12 (Python)</a></li>
 {% endblock %}
 
 {% block content %}
-    <div class="col-sm-9">
-        <hr>
-        <h2>Неделя 9</h2>
-        <ul>
-            <form enctype="multipart/form-data" method="post" action="/week_9">
-                {% csrf_token %}
-                <li><h3>Загрузите csv файл с данными</h3></li>
-                <p><input type="file" name="f" required>
-                    <em><font color="#8b0000"> Копируете данные из под таблички, вставляете в Блокнот нажимаете
-                        сохранить как fileName.csv</font> </em>
-                    <br>
-                <li><h3>Введите x координату для первого центроида</h3></li>
-                <input type="text" name="x_1" value="12.2">
-                <li><h3>Введите y координату для первого центроида</h3></li>
-                <input type="text" name="y_1" value="12.2">
-                <li><h3>Введите x координату для второго центроида</h3></li>
-                <input type="text" name="x_2" value="12.2">
-                <li><h3>Введите y координату для второго центроида</h3></li>
-                <input type="text" name="y_2" value="12.2">
-                <li><h3>Введите x координату для третьего центроида</h3></li>
-                <input type="text" name="x_3" value="12.2">
-                <li><h3>Введите y координату для третьего центроида</h3></li>
-                <input type="text" name="y_3" value="12.2">
+    <h2>Неделя 9</h2>
+    <ul>
+        <form enctype="multipart/form-data" method="post" action="/week_9">
+            {% csrf_token %}
+            <li><h3>Загрузите csv файл с данными</h3></li>
+            <p><input type="file" name="f" required>
+                <em><font color="#8b0000"> Копируете данные из под таблички, вставляете в Блокнот нажимаете
+                    сохранить как fileName.csv</font> </em>
                 <br>
-                <br>
-                <input type="submit" value="Отправить"></p>
-            </form>
-        </ul>
-        {% if answer %}
-            <h2>1-Список классов: <b> {{ answer }}</b></h2>
-            <h2>2-Расстояние: <b> {{ dist }}</b></h2>
-        {% endif %}
-        <br><br>
+            <li><h3>Введите x координату для первого центроида</h3></li>
+            <input type="text" name="x_1" value="12.2">
+            <li><h3>Введите y координату для первого центроида</h3></li>
+            <input type="text" name="y_1" value="12.2">
+            <li><h3>Введите x координату для второго центроида</h3></li>
+            <input type="text" name="x_2" value="12.2">
+            <li><h3>Введите y координату для второго центроида</h3></li>
+            <input type="text" name="y_2" value="12.2">
+            <li><h3>Введите x координату для третьего центроида</h3></li>
+            <input type="text" name="x_3" value="12.2">
+            <li><h3>Введите y координату для третьего центроида</h3></li>
+            <input type="text" name="y_3" value="12.2">
+            <br>
+            <br>
+            <input type="submit" value="Отправить"></p>
+        </form>
+    </ul>
+
+    {% if answer %}
         <hr>
-    </div>
 
-
-    <div>
-        <iframe src="https://money.yandex.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D1%82%D1%8C%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82&targets-hint=&default-sum=&button-text=14&payment-type-choice=on&comment=on&hint=&successURL=&quickpay=shop&account=4100112039044109"
-                width="50%" height="307" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
-    </div>
-    </div>
-
+        <h2>1-Список классов: <b> {{ answer }}</b></h2>
+        <h2>2-Расстояние: <b> {{ dist }}</b></h2>
+    {% endif %}
 {% endblock %}
