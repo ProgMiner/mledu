@@ -18,6 +18,49 @@
 
 {% block content %}
     <h2>Неделя 8-2</h2>
-    <h3>Coming soon...</h3>
-    <img src="https://www.stihi.ru/pics/2019/06/01/2829.jpg">
+    <em style="border-bottom: 1px solid red;">by <a href="https://byprogminer.ru/" target="_blank">ProgMiner</a></em>
+
+    <ul>
+        <form enctype="multipart/form-data" method="post" action="/week_82">
+            {% csrf_token %}
+            <li><h3>Введите количество строк</h3></li>
+            <input type="text" name="count" value="680">
+            <em><font color="#8b0000"> Без лишних пробельных символов.</font> </em>
+            <li><h3>Введите процент тренировочных данных</h3></li>
+            <input type="text" name="train_part" value="80">
+            <em><font color="#8b0000"> Без лишних пробельных символов.</font> </em>
+            <li><h3>Введите параметр <i>criterion</i></h3></li>
+            <input type="text" name="criterion" value="entropy">
+            <em><font color="#8b0000"> Без лишних пробельных символов.</font> </em>
+            <li><h3>Введите параметр <i>max_leaf_nodes</i></h3></li>
+            <input type="text" name="max_leaf_nodes" value="15">
+            <em><font color="#8b0000"> Без лишних пробельных символов.</font> </em>
+            <li><h3>Введите параметр <i>min_samples_leaf</i></h3></li>
+            <input type="text" name="min_samples_leaf" value="10">
+            <em><font color="#8b0000"> Без лишних пробельных символов.</font> </em>
+            <li><h3>Введите параметр <i>random_state</i></h3></li>
+            <input type="text" name="random_state" value="2020">
+            <em><font color="#8b0000"> Без лишних пробельных символов.</font> </em>
+            <li><h3>Введите номера пациентов для предсказания через запятую</h3></li>
+            <input type="text" name="patients" value="737, 740, 763, 702">
+            <em><font color="#8b0000"> Без лишних пробельных символов.</font> </em>
+            <br>
+            <br>
+            <input type="submit" value="Отправить">
+        </form>
+    </ul>
+
+    {% if depth %}
+        <h2>Количество <b>не больных</b> диабетом (0): {{ not_ill_count }}</h2>
+        <h2>Количество <b>больных</b> диабетом (1): {{ ill_count }}</h2>
+        <h2>Максимальная глубина дерева: {{ depth }}</h2>
+        <h2>Предиктор на последнем уровне: {{ last_predictor }}</h2>
+        <h2>Значение предиктора на последнем уровне: {{ last_predictor_value }}</h2>
+        <h2>Доля правильных ответов: {{ accuracy_score }}</h2>
+        <h2>Среднее значение метрик F<sub>1</sub> (Macro-F1): {{ f1_score }}</h2>
+
+        {% for patient, p in prediction %}
+            <h2>Предсказание для пациента <b>{{ patient }}</b>: {{ p }}</h2>
+        {% endfor %}
+    {% endif %}
 {% endblock %}

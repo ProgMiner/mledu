@@ -118,7 +118,21 @@ def week_81(request):
 
 
 def week_82(request):
-    return render(request, 'week_8-2.html')
+    if request.method == 'POST':
+        try:
+            return render(request, 'week_8-2.html', context=week8.week8_2(int(request.POST.get('count')),
+                                                                          int(request.POST.get('train_part')),
+                                                                          request.POST.get('criterion'),
+                                                                          int(request.POST.get('max_leaf_nodes')),
+                                                                          int(request.POST.get('min_samples_leaf')),
+                                                                          int(request.POST.get('random_state')),
+                                                                          request.POST.get('patients')))
+
+        except Exception as ex:
+            print(ex)
+            return render(request, 'week_8-2.html', context={'error': 'Ошибка данных'})
+    else:
+        return render(request, 'week_8-2.html')
 
 
 def week_9(request):
