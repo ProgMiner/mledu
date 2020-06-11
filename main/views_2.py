@@ -187,6 +187,8 @@ def week_10(request):
 def week_11(request):
     if request.method == 'POST':
         try:
+            from decimal import Decimal
+
             pi = dict()
             for s in range(1, 5):
                 s_params = dict()
@@ -198,7 +200,7 @@ def week_11(request):
                     if value is None:
                         continue
 
-                    s_params[a - 1] = float(value)
+                    s_params[a - 1] = Decimal(value)
                 pi[s - 1] = s_params
 
             params = dict()
@@ -218,14 +220,14 @@ def week_11(request):
                             if value is None:
                                 continue
 
-                            a_params[s2 - 1] = float(value)
+                            a_params[s2 - 1] = Decimal(value)
                         s1_params[a - 1] = a_params
                     p_params[s1 - 1] = s1_params
                 params[p] = p_params
             P = params['P']
             R = params['R']
 
-            return render(request, 'week_11.html', context=week11.week11(pi, P, R, float(request.POST.get('gamma'))))
+            return render(request, 'week_11.html', context=week11.week11(pi, P, R, Decimal(request.POST.get('gamma'))))
 
         except Exception as ex:
             print(ex)
