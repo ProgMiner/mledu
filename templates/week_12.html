@@ -41,16 +41,49 @@
         </form>
     </ul>
 
-    {% if answer %}
-        <hr>
-        Nice dick, awesome balls.<br>
+    {% if name %}
+        <script type="application/javascript">
+            let dots = 2;
 
-        {% for algorithm, ans in answer %}
-            <h2>Алгоритм <b>{{ algorithm }}</b></h2>
+            async function ping() {
+                const response = await fetch('/week_12_ping?task={{ name }}');
 
-            <h3>Количество побед: {{ ans.wins_count }}</h3>
-            <h3>Номер игры, в которой агент впервые одержал пятую победу: {{ ans.first_five_series_game }}</h3>
-            <h3>Маршрут: <img src="{{ ans.path }}" alt="маршрут"></h3>
-        {% endfor %}
+                try {
+                    if (response.ok) {
+                        const answer = await response.json();
+
+                        if (answer !== undefined) {
+                            document.getElementById('week12_algorithm').innerText = answer.algorithm;
+                            document.getElementById('week12_wins_count').innerText = answer.wins_count;
+                            document.getElementById('week12_first_five_series_game').innerText = answer.first_five_series_game;
+                            document.getElementById('week12_path').src = answer.path;
+                            document.getElementById('week12_answer').style.display = 'inherit';
+                            document.getElementById('week12_loading').remove();
+
+                            return;
+                        }
+                    }
+                } catch (e) {}
+
+                dots = (dots + 1) % 3;
+                document.getElementById('week12_loading').innerText = 'Загрузка. Ждите' + '...'.substr(0, dots + 1);
+                setTimeout(async () => await ping(), 750);
+            }
+
+            ping();
+        </script>
+
+        <h1 id="week12_loading">Загрузка. Ждите...</h1>
+
+        <div id="week12_answer" style="display: none;">
+            <hr>
+            Nice dick, awesome balls.<br>
+
+            <h2>Алгоритм <b id="week12_algorithm"></b></h2>
+            <h3>Количество побед: <span id="week12_wins_count"></span></h3>
+            <h3>Номер игры, в которой агент впервые одержал пятую победу:
+                <span id="week12_first_five_series_game"></span></h3>
+            <h3>Маршрут: <img src="" alt="маршрут" id="week12_path"></h3>
+        </div>
     {% endif %}
 {% endblock %}

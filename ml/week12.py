@@ -238,9 +238,9 @@ def week12(epsilon, gamma, random_seed, algorithm):
     env = gym.make("FrozenLake-v0", desc=random_map, is_slippery=False)  # Инициализируем среду
 
     if algorithm == 'q-education':
-        return {'answer': [('Q-обучение', week12_1(epsilon, gamma, random_seed, random_map, env))]}
+        return {'algorithm': 'Q-обучение', **week12_1(epsilon, gamma, random_seed, random_map, env)}
 
     if algorithm == 'sarsa':
-        return {'answer': [('SARSA', week12_2(epsilon, gamma, random_seed, random_map, env))]}
+        return {'algorithm': 'SARSA', **week12_2(epsilon, gamma, random_seed, random_map, env)}
 
     return None

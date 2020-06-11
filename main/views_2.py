@@ -1,9 +1,8 @@
 import datetime
 import os
-from concurrent import futures
 
 from django.core.files.storage import FileSystemStorage
-from django.http import StreamingHttpResponse
+from django.http import HttpResponse
 from django.shortcuts import render
 
 from ml import week5, week6, week7, week8, week9, week10, week12
@@ -190,27 +189,53 @@ def week_11(request):
 
 
 def week_12(request):
-    def stream_generator():
+    if request.method == 'POST':
         try:
-            with futures.ThreadPoolExecutor() as executor:
-                context = executor.submit(week12.week12,
-                                          float(request.POST.get('epsilon')),
-                                          float(request.POST.get('gamma')),
-                                          int(request.POST.get('random_seed')),
-                                          request.POST.get('algorithm'))
+            from threading import Thread
+            import tempfile
+            import json
 
-                while True:
-                    try:
-                        yield render(request, 'week_12.html', context=context.result(1)).content
-                        break
-                    except futures.TimeoutError:
-                        yield b'<!-- Loading -->\n'
+            file = tempfile.NamedTemporaryFile(mode='w', dir='static/', suffix='.json', delete=False)
+
+            def task():
+                answer = week12.week12(float(request.POST.get('epsilon')),
+                                       float(request.POST.get('gamma')),
+                                       int(request.POST.get('random_seed')),
+                                       request.POST.get('algorithm'))
+
+                json.dump(answer, file)
+                file.close()
+
+            print(file.name, os.sep)
+
+            Thread(target=task).start()
+            return render(request, 'week_12.html', context={'name': (file.name.split(os.sep)[-1])})
 
         except Exception as ex:
             print(ex)
-            yield render(request, 'week_12.html', context={'error': 'Ошибка данных'}).content
-
-    if request.method == 'POST':
-        return StreamingHttpResponse(stream_generator(), content_type='text/html')
+            return render(request, 'week_12.html', context={'error': 'Ошибка данных'})
     else:
         return render(request, 'week_12.html')
+
+
+def week_12_ping(request):
+    try:
+        name = request.GET.get('task')
+
+        if os.sep in name:
+            raise ValueError
+
+        file = open(f'static/{name}', 'r')
+
+        try:
+            content = file.read().encode()
+
+            if len(content) > 0:
+                os.remove(file.name)
+
+            return HttpResponse(content)
+        finally:
+            if not file.closed:
+                file.close()
+    except:
+        return HttpResponse(b'')
