@@ -191,7 +191,7 @@ def week_11(request):
 def week_12(request):
     if request.method == 'POST':
         try:
-            from threading import Thread
+            from multiprocessing import Process
             import tempfile
             import json
 
@@ -205,7 +205,7 @@ def week_12(request):
                 json.dump(answer, file)
                 file.close()
 
-            Thread(target=task).start()
+            Process(target=task).start()
             return render(request, 'week_12.html', context={'name': (file.name.split(os.sep)[-1]),
                                                             'algorithms': enumerate(['Q-алгоритм', 'SARSA'])})
 
