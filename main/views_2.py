@@ -200,16 +200,14 @@ def week_12(request):
             def task():
                 answer = week12.week12(float(request.POST.get('epsilon')),
                                        float(request.POST.get('gamma')),
-                                       int(request.POST.get('random_seed')),
-                                       request.POST.get('algorithm'))
+                                       int(request.POST.get('random_seed')))
 
                 json.dump(answer, file)
                 file.close()
 
-            print(file.name, os.sep)
-
             Thread(target=task).start()
-            return render(request, 'week_12.html', context={'name': (file.name.split(os.sep)[-1])})
+            return render(request, 'week_12.html', context={'name': (file.name.split(os.sep)[-1]),
+                                                            'algorithms': enumerate(['Q-алгоритм', 'SARSA'])})
 
         except Exception as ex:
             print(ex)

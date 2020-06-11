@@ -233,14 +233,9 @@ def week12_2(epsilon, gamma, random_seed, random_map, env):
             'path': plot_path(random_map, env, Q)}
 
 
-def week12(epsilon, gamma, random_seed, algorithm):
+def week12(epsilon, gamma, random_seed):
     random_map = generate_random_map(size=6, p=0.8, sd=random_seed)  # Создаем свою карту
     env = gym.make("FrozenLake-v0", desc=random_map, is_slippery=False)  # Инициализируем среду
 
-    if algorithm == 'q-education':
-        return {'algorithm': 'Q-обучение', **week12_1(epsilon, gamma, random_seed, random_map, env)}
-
-    if algorithm == 'sarsa':
-        return {'algorithm': 'SARSA', **week12_2(epsilon, gamma, random_seed, random_map, env)}
-
-    return None
+    return [week12_1(epsilon, gamma, random_seed, random_map, env),
+            week12_2(epsilon, gamma, random_seed, random_map, env)]

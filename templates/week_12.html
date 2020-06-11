@@ -31,9 +31,6 @@
             <input type="text" name="gamma" value="0.9">
             <li><h3>Введите параметр <i>random_seed</i></h3></li>
             <input type="text" name="random_seed" value="10">
-            <li><h3>Выберите алгоритм обучения</h3></li>
-            <label><input type="radio" name="algorithm" value="q-education" checked> Q-обучение</label><br>
-            <label><input type="radio" name="algorithm" value="sarsa"> SARSA</label>
             <br>
             <br>
             <input type="submit" value="Отправить">
@@ -53,13 +50,15 @@
                         const answer = await response.json();
 
                         if (answer !== undefined) {
-                            document.getElementById('week12_algorithm').innerText = answer.algorithm;
-                            document.getElementById('week12_wins_count').innerText = answer.wins_count;
-                            document.getElementById('week12_first_five_series_game').innerText = answer.first_five_series_game;
-                            document.getElementById('week12_path').src = answer.path;
+                            answer.forEach((value, i) => {
+                                document.getElementById(`week12_wins_count_${i}`).innerText = value.wins_count;
+                                document.getElementById(`week12_first_five_series_game_${i}`).innerText =
+                                    value.first_five_series_game;
+                                document.getElementById(`week12_path_${i}`).src = value.path;
+                            });
+
                             document.getElementById('week12_answer').style.display = 'inherit';
                             document.getElementById('week12_loading').remove();
-
                             return;
                         }
                     }
@@ -79,11 +78,13 @@
             <hr>
             Nice dick, awesome balls.<br>
 
-            <h2>Алгоритм <b id="week12_algorithm"></b></h2>
-            <h3>Количество побед: <span id="week12_wins_count"></span></h3>
-            <h3>Номер игры, в которой агент впервые одержал пятую победу:
-                <span id="week12_first_five_series_game"></span></h3>
-            <h3>Маршрут: <img src="" alt="маршрут" id="week12_path"></h3>
+            {% for i, algorithm in algorithms %}
+                <h2>Алгоритм <b>{{ algorithm }}</b></h2>
+                <h3>Количество побед: <span id="week12_wins_count_{{ i }}"></span></h3>
+                <h3>Номер игры, в которой агент впервые одержал пятую победу:
+                    <span id="week12_first_five_series_game_{{ i }}"></span></h3>
+                <h3>Маршрут: <img src="" alt="маршрут" id="week12_path_{{ i }}"></h3>
+            {% endfor %}
         </div>
     {% endif %}
 {% endblock %}
