@@ -18,6 +18,102 @@
 
 {% block content %}
     <h2>Неделя 11</h2>
-    <h3>Coming soon...</h3>
-    <img src="https://www.stihi.ru/pics/2019/06/01/2829.jpg">
+    <em style="border-bottom: 1px solid red;">by <a href="https://byprogminer.ru/" target="_blank">ProgMiner</a></em>
+
+    <br>
+    <ul>
+        <form enctype="multipart/form-data" method="post" action="/week_11">
+            {% csrf_token %}
+
+            <h2>Для состояния <i><b>s<sub>1</sub></b></i>:</h2>
+            <li><h3>Введите параметр <i>&#960;(a<sub>1</sub>|s<sub>1</sub>)</i></h3></li>
+            <input type="text" name="pi_a1_s1" value="0.1">
+            <li><h3>Введите параметр <i>&#960;(a<sub>2</sub>|s<sub>1</sub>)</i></h3></li>
+            <input type="text" name="pi_a2_s1" value="0.9">
+            <li><h3>Введите параметр <i>P<sup>a<sub>1</sub></sup><sub>s<sub>1</sub> s<sub>2</sub></sub></i></h3></li>
+            <input type="text" name="P_a1_s1_s2" value="0.1">
+            <li><h3>Введите параметр <i>P<sup>a<sub>1</sub></sup><sub>s<sub>1</sub> s<sub>3</sub></sub></i></h3></li>
+            <input type="text" name="P_a1_s1_s3" value="0.3">
+            <li><h3>Введите параметр <i>P<sup>a<sub>1</sub></sup><sub>s<sub>1</sub> s<sub>4</sub></sub></i></h3></li>
+            <input type="text" name="P_a1_s1_s4" value="0.6">
+            <em><font color="#8b0000">Если у вас нет этого параметра, введите 0</font></em>
+            <li><h3>Введите параметр <i>R<sup>a<sub>1</sub></sup><sub>s<sub>1</sub> s<sub>2</sub></sub></i></h3></li>
+            <input type="text" name="R_a1_s1_s2" value="2">
+            <li><h3>Введите параметр <i>R<sup>a<sub>1</sub></sup><sub>s<sub>1</sub> s<sub>3</sub></sub></i></h3></li>
+            <input type="text" name="R_a1_s1_s3" value="3">
+            <li><h3>Введите параметр <i>R<sup>a<sub>1</sub></sup><sub>s<sub>1</sub> s<sub>4</sub></sub></i></h3></li>
+            <input type="text" name="R_a1_s1_s4" value="-1">
+            <em><font color="#8b0000">Если у вас нет этого параметра, введите 0</font></em>
+            <li><h3>Введите параметр <i>P<sup>a<sub>2</sub></sup><sub>s<sub>1</sub> s<sub>3</sub></sub></i></h3></li>
+            <input type="text" name="P_a2_s1_s3" value="1">
+            <li><h3>Введите параметр <i>R<sup>a<sub>2</sub></sup><sub>s<sub>1</sub> s<sub>3</sub></sub></i></h3></li>
+            <input type="text" name="R_a2_s1_s3" value="5">
+            <br>
+            <br>
+            <h2>Для состояния <i><b>s<sub>2</sub></b></i>:</h2>
+            <li><h3>Введите параметр <i>&#960;(a<sub>2</sub>|s<sub>2</sub>)</i></h3></li>
+            <input type="text" name="pi_a2_s2" value="1">
+            <li><h3>Введите параметр <i>P<sup>a<sub>2</sub></sup><sub>s<sub>2</sub> s<sub>1</sub></sub></i></h3></li>
+            <input type="text" name="P_a2_s2_s1" value="1">
+            <li><h3>Введите параметр <i>R<sup>a<sub>2</sub></sup><sub>s<sub>2</sub> s<sub>1</sub></sub></i></h3></li>
+            <input type="text" name="R_a2_s2_s1" value="3">
+            <br>
+            <br>
+            <h2>Для состояния <i><b>s<sub>3</sub></b></i>:</h2>
+            <li><h3>Введите параметр <i>&#960;(a<sub>1</sub>|s<sub>3</sub>)</i></h3></li>
+            <input type="text" name="pi_a1_s3" value="0.1">
+            <li><h3>Введите параметр <i>&#960;(a<sub>3</sub>|s<sub>3</sub>)</i></h3></li>
+            <input type="text" name="pi_a3_s3" value="0.9">
+            <li><h3>Введите параметр <i>P<sup>a<sub>1</sub></sup><sub>s<sub>3</sub> s<sub>1</sub></sub></i></h3></li>
+            <input type="text" name="P_a1_s3_s1" value="1">
+            <li><h3>Введите параметр <i>R<sup>a<sub>1</sub></sup><sub>s<sub>3</sub> s<sub>1</sub></sub></i></h3></li>
+            <input type="text" name="R_a1_s3_s1" value="-3">
+            <li><h3>Введите параметр <i>P<sup>a<sub>3</sub></sup><sub>s<sub>3</sub> s<sub>3</sub></sub></i></h3></li>
+            <input type="text" name="P_a3_s3_s3" value="0.2">
+            <li><h3>Введите параметр <i>P<sup>a<sub>3</sub></sup><sub>s<sub>3</sub> s<sub>4</sub></sub></i></h3></li>
+            <input type="text" name="P_a3_s3_s4" value="0.8">
+            <li><h3>Введите параметр <i>R<sup>a<sub>3</sub></sup><sub>s<sub>3</sub> s<sub>3</sub></sub></i></h3></li>
+            <input type="text" name="R_a3_s3_s3" value="1">
+            <li><h3>Введите параметр <i>R<sup>a<sub>3</sub></sup><sub>s<sub>3</sub> s<sub>4</sub></sub></i></h3></li>
+            <input type="text" name="R_a3_s3_s4" value="6">
+            <br>
+            <br>
+            <h2>Для состояния <i><b>s<sub>4</sub></b></i>:</h2>
+            <li><h3>Введите параметр <i>&#960;(a<sub>1</sub>|s<sub>4</sub>)</i></h3></li>
+            <input type="text" name="pi_a1_s4" value="1">
+            <li><h3>Введите параметр <i>&#960;(a<sub>3</sub>|s<sub>4</sub>)</i></h3></li>
+            <input type="text" name="pi_a3_s4" value="0">
+            <em><font color="#8b0000">Если у вас нет этого параметра, введите 0</font></em>
+            <li><h3>Введите параметр <i>P<sup>a<sub>1</sub></sup><sub>s<sub>4</sub> s<sub>1</sub></sub></i></h3></li>
+            <input type="text" name="P_a1_s4_s1" value="0.6">
+            <li><h3>Введите параметр <i>P<sup>a<sub>1</sub></sup><sub>s<sub>4</sub> s<sub>2</sub></sub></i></h3></li>
+            <input type="text" name="P_a1_s4_s2" value="0.4">
+            <li><h3>Введите параметр <i>R<sup>a<sub>1</sub></sup><sub>s<sub>4</sub> s<sub>1</sub></sub></i></h3></li>
+            <input type="text" name="R_a1_s4_s1" value="5">
+            <li><h3>Введите параметр <i>R<sup>a<sub>1</sub></sup><sub>s<sub>4</sub> s<sub>2</sub></sub></i></h3></li>
+            <input type="text" name="R_a1_s4_s2" value="-3">
+            <li><h3>Введите параметр <i>P<sup>a<sub>3</sub></sup><sub>s<sub>4</sub> s<sub>3</sub></sub></i></h3></li>
+            <input type="text" name="P_a3_s4_s3" value="0">
+            <em><font color="#8b0000">Если у вас нет этого параметра, введите 0</font></em>
+            <li><h3>Введите параметр <i>R<sup>a<sub>3</sub></sup><sub>s<sub>4</sub> s<sub>3</sub></sub></i></h3></li>
+            <input type="text" name="R_a3_s4_s3" value="0">
+            <em><font color="#8b0000">Если у вас нет этого параметра, введите 0</font></em>
+            <br>
+            <br>
+            <li><h3>Введите параметр <i>&#947;</i></h3></li>
+            <input type="text" name="gamma" value="0.8">
+            <br>
+            <br>
+            <input type="submit" value="Отправить">
+        </form>
+    </ul>
+
+    {% if solution %}
+        <hr>
+        Дождались! Чашка для левшей:<br>
+
+        {% for i, x in solution %}
+            <h2>Значение ценности состояния <b><i>s<sub>{{ i }}</sub></i></b>: {{ x }}</h2>
+        {% endfor %}
+    {% endif %}
 {% endblock %}

@@ -5,7 +5,7 @@ from django.core.files.storage import FileSystemStorage
 from django.http import HttpResponse
 from django.shortcuts import render
 
-from ml import week5, week6, week7, week8, week9, week10, week12
+from ml import week5, week6, week7, week8, week9, week10, week12, week11
 from .views import logs, get_client_ip
 
 
@@ -185,7 +185,53 @@ def week_10(request):
 
 
 def week_11(request):
-    return render(request, 'week_11.html')
+    if request.method == 'POST':
+        try:
+            pi = dict()
+            for s in range(1, 5):
+                s_params = dict()
+
+                for a in range(1, 4):
+                    param = f'pi_a{a}_s{s}'
+                    value = request.POST.get(param)
+
+                    if value is None:
+                        continue
+
+                    s_params[a - 1] = float(value)
+                pi[s - 1] = s_params
+
+            params = dict()
+            for p in ['P', 'R']:
+                p_params = dict()
+
+                for s1 in range(1, 5):
+                    s1_params = dict()
+
+                    for a in range(1, 4):
+                        a_params = dict()
+
+                        for s2 in range(1, 5):
+                            param = f'{p}_a{a}_s{s1}_s{s2}'
+                            value = request.POST.get(param)
+
+                            if value is None:
+                                continue
+
+                            a_params[s2 - 1] = float(value)
+                        s1_params[a - 1] = a_params
+                    p_params[s1 - 1] = s1_params
+                params[p] = p_params
+            P = params['P']
+            R = params['R']
+
+            return render(request, 'week_11.html', context=week11.week11(pi, P, R, float(request.POST.get('gamma'))))
+
+        except Exception as ex:
+            print(ex)
+            return render(request, 'week_11.html', context={'error': 'Ошибка данных'})
+    else:
+        return render(request, 'week_11.html')
 
 
 def week_12(request):
