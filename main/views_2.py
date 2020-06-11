@@ -1,5 +1,6 @@
 import datetime
 import os
+from threading import Lock
 
 from django.core.files.storage import FileSystemStorage
 from django.http import HttpResponse
@@ -236,6 +237,9 @@ def week_11(request):
         return render(request, 'week_11.html')
 
 
+week_12_lock = Lock()
+
+
 def week_12(request):
     if request.method == 'POST':
         try:
@@ -246,10 +250,13 @@ def week_12(request):
             file = tempfile.NamedTemporaryFile(mode='w', dir='static/', suffix='.json', delete=False)
 
             def task():
+                week_12_lock.acquire()
+
                 answer = week12.week12(float(request.POST.get('epsilon')),
                                        float(request.POST.get('gamma')),
                                        int(request.POST.get('random_seed')))
 
+                week_12_lock.release()
                 json.dump(answer, file)
                 file.close()
 
