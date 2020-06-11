@@ -1,5 +1,6 @@
 import datetime
 import os
+from concurrent import futures
 
 from django.core.files.storage import FileSystemStorage
 from django.http import StreamingHttpResponse
@@ -190,13 +191,20 @@ def week_11(request):
 
 def week_12(request):
     def stream_generator():
-        yield b'<!-- Loading -->\n'
-
         try:
-            yield render(request, 'week_12.html', context=week12.week12(float(request.POST.get('epsilon')),
-                                                                        float(request.POST.get('gamma')),
-                                                                        int(request.POST.get('random_seed')),
-                                                                        request.POST.get('algorithm'))).content
+            with futures.ThreadPoolExecutor() as executor:
+                context = executor.submit(week12.week12,
+                                          float(request.POST.get('epsilon')),
+                                          float(request.POST.get('gamma')),
+                                          int(request.POST.get('random_seed')),
+                                          request.POST.get('algorithm'))
+
+                while True:
+                    try:
+                        yield render(request, 'week_12.html', context=context.result(1)).content
+                        break
+                    except futures.TimeoutError:
+                        yield b'<!-- Loading -->\n'
 
         except Exception as ex:
             print(ex)
