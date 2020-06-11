@@ -4,7 +4,7 @@ import os
 from django.core.files.storage import FileSystemStorage
 from django.shortcuts import render
 
-from ml import week5, week6, week7, week8, week9, week10
+from ml import week5, week6, week7, week8, week9, week10, week12
 from .views import logs, get_client_ip
 
 
@@ -188,4 +188,14 @@ def week_11(request):
 
 
 def week_12(request):
-    return render(request, 'week_12.html')
+    if request.method == 'POST':
+        try:
+            return render(request, 'week_12.html', context=week12.week12(float(request.POST.get('epsilon')),
+                                                                         float(request.POST.get('gamma')),
+                                                                         int(request.POST.get('random_seed'))))
+
+        except Exception as ex:
+            print(ex)
+            return render(request, 'week_12.html', context={'error': 'Ошибка данных'})
+    else:
+        return render(request, 'week_12.html')

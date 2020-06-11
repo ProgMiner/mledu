@@ -13,3 +13,4 @@ django-cors-headers
 sklearn
 scikit-learn==0.23.0
 numpy
+gym

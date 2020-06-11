@@ -19,6 +19,35 @@
 
 {% block content %}
     <h2>Неделя 12</h2>
-    <h3>Coming soon...</h3>
-    <img src="https://www.stihi.ru/pics/2019/06/01/2829.jpg">
+    <em style="border-bottom: 1px solid red;">by <a href="https://byprogminer.ru/" target="_blank">ProgMiner</a></em>
+
+    <br>
+    <ul>
+        <form enctype="multipart/form-data" method="post" action="/week_12">
+            {% csrf_token %}
+            <li><h3>Введите параметр <i>epsilon</i></h3></li>
+            <input type="text" name="epsilon" value="0.05">
+            <li><h3>Введите параметр <i>gamma</i></h3></li>
+            <input type="text" name="gamma" value="0.9">
+            <li><h3>Введите параметр <i>random_seed</i></h3></li>
+            <input type="text" name="random_seed" value="10">
+            <br>
+            <br>
+            <input type="submit" value="Отправить">
+            <em><font color="#8b0000">Будет долго загружаться!</font></em>
+        </form>
+    </ul>
+
+    {% if answer %}
+        <hr>
+        Nice dick, awesome balls.<br>
+
+        {% for algorithm, ans in answer %}
+            <h2>Алгоритм <b>{{ algorithm }}</b></h2>
+
+            <h3>Количество побед: {{ ans.wins_count }}</h3>
+            <h3>Номер игры, в которой агент впервые одержал пятую победу: {{ ans.first_five_series_game }}</h3>
+            <h3>Маршрут: <img src="{{ ans.path }}" alt="маршрут"></h3>
+        {% endfor %}
+    {% endif %}
 {% endblock %}
