@@ -2,6 +2,7 @@ import datetime
 import os
 
 from django.core.files.storage import FileSystemStorage
+from django.http import StreamingHttpResponse
 from django.shortcuts import render
 
 from ml import week5, week6, week7, week8, week9, week10, week12
@@ -188,15 +189,20 @@ def week_11(request):
 
 
 def week_12(request):
-    if request.method == 'POST':
+    def stream_generator():
+        yield b'<!-- Loading -->\n'
+
         try:
-            return render(request, 'week_12.html', context=week12.week12(float(request.POST.get('epsilon')),
-                                                                         float(request.POST.get('gamma')),
-                                                                         int(request.POST.get('random_seed')),
-                                                                         request.POST.get('algorithm')))
+            yield render(request, 'week_12.html', context=week12.week12(float(request.POST.get('epsilon')),
+                                                                        float(request.POST.get('gamma')),
+                                                                        int(request.POST.get('random_seed')),
+                                                                        request.POST.get('algorithm'))).content
 
         except Exception as ex:
             print(ex)
-            return render(request, 'week_12.html', context={'error': 'Ошибка данных'})
+            yield render(request, 'week_12.html', context={'error': 'Ошибка данных'}).content
+
+    if request.method == 'POST':
+        return StreamingHttpResponse(stream_generator(), content_type='text/html')
     else:
         return render(request, 'week_12.html')
