@@ -192,7 +192,8 @@ def week_12(request):
         try:
             return render(request, 'week_12.html', context=week12.week12(float(request.POST.get('epsilon')),
                                                                          float(request.POST.get('gamma')),
-                                                                         int(request.POST.get('random_seed'))))
+                                                                         int(request.POST.get('random_seed')),
+                                                                         request.POST.get('algorithm')))
 
         except Exception as ex:
             print(ex)
