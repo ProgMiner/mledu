@@ -34,4 +34,4 @@ python3 manage.py runserver
 
 ## Авторы
 
-Разработано @YUNGC0DE и доработано @ProgMiner (недели 8-12).
+Разработано @YUNGC0DE и доработано @ProgMiner (недели 8, 10-12).
