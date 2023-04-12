@@ -12,5 +12,5 @@ whitenoise
 django-cors-headers
 sklearn
 scikit-learn==0.23.0
-numpy
+numpy==1.23.5
 gym
